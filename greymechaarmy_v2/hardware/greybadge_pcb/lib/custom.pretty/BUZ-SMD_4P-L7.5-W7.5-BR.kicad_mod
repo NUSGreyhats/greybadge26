@@ -1,0 +1,234 @@
+(footprint "BUZ-SMD_4P-L7.5-W7.5-BR"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "BUZ-SMD_4P-L7.5-W7.5-BR footprint")
+	(tags "BUZ-SMD_4P-L7.5-W7.5-BR footprint C417427")
+	(property "Reference" "BZ1"
+		(at -0.000026 -5.809983 0)
+		(layer "F.SilkS")
+		(uuid "08b76bdd-a3a3-4a9c-affb-b3ef25b88573")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Buzzer"
+		(at -0.000028 5.810032 0)
+		(layer "F.Fab")
+		(uuid "fb86dcd6-9807-49fa-a50e-f4ad65cef586")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3faa312d-16d1-495d-884a-45bd2abb48ee")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Buzzer, polarized"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f91f1c46-9353-4ddc-b9c9-cef15c370d75")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.810033 1.905029)
+		(end -3.810033 -2.031975)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f0336e95-b9af-46fe-b5c8-c5a5f982d199")
+	)
+	(fp_line
+		(start -2.41303 0.000025)
+		(end -1.778026 0.635027)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3f220db9-c800-4e64-bc3c-2a27ee6fb86b")
+	)
+	(fp_line
+		(start -2.032026 -3.809979)
+		(end 2.031982 -3.809981)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b188776d-3ef2-4a8b-8b63-dd555441b953")
+	)
+	(fp_line
+		(start -1.778026 0.635027)
+		(end -1.651032 0.762031)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a11bbbc-c22c-4932-8b7d-9a65ec5d1094")
+	)
+	(fp_line
+		(start -1.651032 -0.761971)
+		(end -2.41303 0.000025)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9c90337c-13c9-421d-8a80-5dcbbc1de17f")
+	)
+	(fp_line
+		(start -1.651032 0.762031)
+		(end -1.651025 0.635028)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "90f6b213-c854-41f3-9611-f12dcbfa76ac")
+	)
+	(fp_line
+		(start -1.651025 0.635028)
+		(end -1.651032 -0.761971)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a2d0b24e-07e6-4516-a948-c42598f28941")
+	)
+	(fp_line
+		(start 1.142982 1.905027)
+		(end 1.142977 0.635027)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f139d910-fab3-4655-9ca8-106140958f53")
+	)
+	(fp_line
+		(start 1.77798 1.270031)
+		(end 0.507977 1.270024)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6d637534-b561-48d7-80e5-60c48a3bc750")
+	)
+	(fp_line
+		(start 2.031979 3.810028)
+		(end -2.032032 3.810032)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bc19e988-2437-49f2-882c-455e6b824060")
+	)
+	(fp_line
+		(start 3.809979 -2.018846)
+		(end 3.809981 2.018919)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "09f7cfc2-5c57-4db9-817b-dab0327b7e08")
+	)
+	(fp_circle
+		(center 1.142875 1.270127)
+		(end 1.861186 1.270124)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "ecb8ff67-f541-4a32-85a6-1e9d18188fde")
+	)
+	(fp_circle
+		(center 3.749936 3.749936)
+		(end 3.77991 3.749932)
+		(stroke
+			(width 0.059995)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "a67669af-36ab-4d2b-b457-b063419f4895")
+	)
+	(fp_text user "REF**"
+		(at -0.000028 7.810027 0)
+		(layer "F.Fab")
+		(uuid "7b107545-71e4-486b-bb25-4cdeebf34616")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 3.149985 3.149983)
+		(size 1.8 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "148f9a43-b0b4-4a7b-a1ce-e7ddcf9bb2cd")
+	)
+	(pad "2" smd rect
+		(at 3.149983 -3.149985)
+		(size 1.8 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0f038c8b-b9ec-400d-9a29-e13093c46dd6")
+	)
+	(pad "3" smd rect
+		(at -3.149985 -3.149983)
+		(size 1.8 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "71a49f1b-a2ec-41b5-be17-da961fb0f345")
+	)
+	(pad "4" smd rect
+		(at -3.149983 3.149985)
+		(size 1.8 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "50e95c30-603a-4a8b-a0eb-35709d281b6b")
+	)
+	(embedded_fonts no)
+	(model "C:\\Users\\Yasmin\\Documents\\GitHub\\maibadge\\easyeda-kicad/easyeda-footprint.pretty/packages3d/BUZ-SMD_4P-L7.5-W7.5-BR.step"
+		(offset
+			(xyz -0.0000253999996185 -0.0000253999996185 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
