@@ -56345,14 +56345,6 @@
 		(uuid "1a6938a9-3dfa-42fd-af24-6e11b107cbc4")
 	)
 	(segment
-		(start 92.9125 73.595)
-		(end 91.450159 73.595)
-		(width 0.5)
-		(layer "B.Cu")
-		(net 2)
-		(uuid "1b4a455e-3aaf-4b2e-94f7-edcf65a89791")
-	)
-	(segment
 		(start 87.528611 84.320787)
 		(end 87.528611 79.360787)
 		(width 0.5)
