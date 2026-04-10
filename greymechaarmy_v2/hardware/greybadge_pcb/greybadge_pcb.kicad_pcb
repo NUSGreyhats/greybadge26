@@ -17820,7 +17820,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R29"
-			(at -1.94803 -0.003372 90)
+			(at -2.02168 -0.296826 90)
 			(layer "B.SilkS")
 			(uuid "9b190183-9196-4471-b3af-b7205e93efd5")
 			(effects
@@ -29869,7 +29869,7 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 2 copper strips")
 		(tags "net tie solder jumper bridged")
 		(property "Reference" "JP10"
-			(at -3.262143 -0.073511 0)
+			(at -0.014761 2.079967 0)
 			(layer "B.SilkS")
 			(uuid "505da8cc-f335-4eed-a1eb-6096d423a5eb")
 			(effects
@@ -43777,7 +43777,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C38"
-			(at 1.916 -0.035 90)
+			(at 2.067565 0.74008 90)
 			(layer "B.SilkS")
 			(uuid "909b7604-5179-42cc-aae7-b80f4b9abeae")
 			(effects
@@ -52608,7 +52608,7 @@
 		)
 	)
 	(gr_text "USB_BOOT"
-		(at 146.151501 120.428084 0)
+		(at 145.986718 128.69407 0)
 		(layer "B.SilkS" knockout)
 		(uuid "5b3df538-b114-4c58-91eb-d66e4aebbbcf")
 		(effects
