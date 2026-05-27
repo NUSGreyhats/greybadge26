@@ -10,3 +10,4 @@ greymechaarmy_v2/hardware/greybadge_pcb/jlcpcb/gerber/greybadge_pcb-PTH.drl
 greymechaarmy_v2/hardware/greybadge_pcb/jlcpcb/gerber/greybadge_pcb-SilkBottom.gbr
 greymechaarmy_v2/hardware/greybadge_pcb/jlcpcb/gerber/greybadge_pcb-SilkTop.gbr
 greymechaarmy_v2/hardware/greybadge_pcb/jlcpcb/production_files/GERBER-greybadge_pcb.zip
+bitstream-re/verilog/main_synth.v
