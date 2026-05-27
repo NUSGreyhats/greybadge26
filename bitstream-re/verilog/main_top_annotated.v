@@ -1,0 +1,52 @@
+// IO annotation wrapper for bitstream-only RE of main.bit
+// Full gate-level netlist: main_decomp.v (51 MB)
+// Yosys-lifted netlist: main_synth.v (194 MB)
+// Mapped 44/65 top ports to package sites
+module main_top_annotated(
+  output pad_B14_JTXDATA0A_SIOLOGIC,
+  input pad_A5_JPADDIB_PIO,
+  output pad_B13_PADDTA_PIO,
+  output pad_A7_PADDTB_PIO,
+  output pad_A7_JTXDATA0B_SIOLOGIC,
+  input pad_A9_JPADDIB_PIO,
+  output pad_A9_PADDTB_PIO,
+  output pad_C6_JTXDATA0A_SIOLOGIC,
+  output pad_A9_PADDTA_PIO,
+  output pad_B13_PADDOA_PIO,
+  output pad_B12_PADDOA_PIO,
+  output pad_E5_PADDOB_PIO,
+  output pad_A9_PADDOA_PIO,
+  output pad_A13_JTXDATA0A_SIOLOGIC,
+  output pad_B12_JTSDATA0A_SIOLOGIC,
+  output pad_A11_JTSDATA0A_SIOLOGIC,
+  output pad_A13_JTSDATA0A_SIOLOGIC,
+  output pad_A3_PADDTA_PIO,
+  output pad_A3_JTSDATA0B_SIOLOGIC,
+  output pad_B10_PADDTA_PIO,
+  output pad_B11_PADDOA_PIO,
+  input pad_A7_JPADDIB_PIO,
+  input pad_A7_JPADDIA_PIO,
+  input pad_A9_JPADDIA_PIO,
+  output pad_B11_JTSDATA0A_SIOLOGIC,
+  output pad_A11_PADDOB_PIO,
+  output pad_C5_PADDOA_PIO,
+  output pad_A9_JTXDATA0B_SIOLOGIC,
+  input pad_C5_JPADDIB_PIO,
+  output pad_E6_JTXDATA0B_SIOLOGIC,
+  output pad_A11_JTXDATA0A_SIOLOGIC,
+  output pad_B14_JTSDATA0A_SIOLOGIC,
+  output pad_A13_PADDTB_PIO,
+  input pad_A3_JPADDIA_PIO,
+  output pad_C8_JTSDATA0B_SIOLOGIC,
+  output pad_B9_PADDTA_PIO,
+  output pad_A3_PADDOA_PIO,
+  output pad_E4_JTXDATA0B_SIOLOGIC,
+  input pad_C6_JPADDIB_PIO,
+  output pad_C4_JTXDATA0A_SIOLOGIC,
+  output pad_A11_PADDTB_PIO,
+  input pad_B14_JPADDIB_PIO,
+  input pad_A5_JPADDIA_PIO,
+  output pad_A13_JTXDATA0B_SIOLOGIC
+);
+  // See analysis/port_map.csv for decomp_port <-> pad_* mapping
+endmodule

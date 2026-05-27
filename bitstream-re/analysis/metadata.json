@@ -1,0 +1,22 @@
+{
+  "input": {
+    "file": "main.bit",
+    "size_bytes": 582369,
+    "sha256": "9c2a2bb38f98ac247bdef84a44d666320d6065db019b80f114855ebfb3a5374b",
+    "part": "LFE5U-25F-6CABGA256",
+    "idcode": "0x41111043",
+    "usercode": "0x00000000",
+    "config_frames": 7562
+  },
+  "roundtrip": {
+    "file": "main_roundtrip.bit",
+    "sha256": "9c2a2bb38f98ac247bdef84a44d666320d6065db019b80f114855ebfb3a5374b",
+    "identical_to_input": true
+  },
+  "outputs": {
+    "main.config_bytes": 558187,
+    "main_decomp.v_bytes": 51487572,
+    "main_synth.v_bytes": 194033167,
+    "ebr_init_words": 1688
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "0": {
+    "kind": "OFX0 (PFUMX)",
+    "tile": "R2C64",
+    "slice": "A",
+    "luts": [
+      {
+        "slice": "A",
+        "lut": 0,
+        "init": "0101010100010100",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A0",
+            "wire": "R2C64_PLC2_A0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "B0",
+            "wire": "R2C64_PLC2_B0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "C0",
+            "wire": "R2C64_PLC2_C0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          },
+          {
+            "port": "D0",
+            "wire": "R2C64_PLC2_D0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          }
+        ],
+        "tile": "R2C64",
+        "bit_idx": 0
+      },
+      {
+        "slice": "A",
+        "lut": 1,
+        "init": "0001010000010100",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A1",
+            "wire": "R2C64_PLC2_A1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "B1",
+            "wire": "R2C64_PLC2_B1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "C1",
+            "wire": "R2C64_PLC2_C1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          },
+          {
+            "port": "D1",
+            "wire": "R2C64_PLC2_D1_SLICE",
+            "resolved": "R2C64_PLC2_D1"
+          }
+        ],
+        "tile": "R2C64",
+        "bit_idx": 0
+      }
+    ],
+    "m_sel_wire": "R2C64_PLC2_M0_SLICE",
+    "m_sel_resolved": "MIB_R0C67_PIOT0_JPADDIB_PIO"
+  },
+  "1": {
+    "kind": "OFX0 (PFUMX)",
+    "tile": "R2C57",
+    "slice": "A",
+    "luts": [
+      {
+        "slice": "A",
+        "lut": 0,
+        "init": "0000010000000010",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A0",
+            "wire": "R2C57_PLC2_A0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          },
+          {
+            "port": "B0",
+            "wire": "R2C57_PLC2_B0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "C0",
+            "wire": "R2C57_PLC2_C0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "D0",
+            "wire": "R2C57_PLC2_D0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          }
+        ],
+        "tile": "R2C57",
+        "bit_idx": 1
+      },
+      {
+        "slice": "A",
+        "lut": 1,
+        "init": "0000001100001010",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A1",
+            "wire": "R2C57_PLC2_A1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          },
+          {
+            "port": "B1",
+            "wire": "R2C57_PLC2_B1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "C1",
+            "wire": "R2C57_PLC2_C1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "D1",
+            "wire": "R2C57_PLC2_D1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          }
+        ],
+        "tile": "R2C57",
+        "bit_idx": 1
+      }
+    ],
+    "m_sel_wire": "R2C57_PLC2_M0_SLICE",
+    "m_sel_resolved": "MIB_R0C67_PIOT0_JPADDIB_PIO"
+  },
+  "2": {
+    "kind": "OFX0 (PFUMX)",
+    "tile": "R2C55",
+    "slice": "A",
+    "luts": [
+      {
+        "slice": "A",
+        "lut": 0,
+        "init": "0010001100000010",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A0",
+            "wire": "R2C55_PLC2_A0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "B0",
+            "wire": "R2C55_PLC2_B0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "C0",
+            "wire": "R2C55_PLC2_C0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          },
+          {
+            "port": "D0",
+            "wire": "R2C55_PLC2_D0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          }
+        ],
+        "tile": "R2C55",
+        "bit_idx": 2
+      },
+      {
+        "slice": "A",
+        "lut": 1,
+        "init": "1000000001001100",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A1",
+            "wire": "R2C55_PLC2_A1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "B1",
+            "wire": "R2C55_PLC2_B1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          },
+          {
+            "port": "C1",
+            "wire": "R2C55_PLC2_C1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          },
+          {
+            "port": "D1",
+            "wire": "R2C55_PLC2_D1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          }
+        ],
+        "tile": "R2C55",
+        "bit_idx": 2
+      }
+    ],
+    "m_sel_wire": "R2C55_PLC2_M0_SLICE",
+    "m_sel_resolved": "MIB_R0C67_PIOT0_JPADDIB_PIO"
+  },
+  "3": {
+    "kind": "OFX0 (PFUMX)",
+    "tile": "R2C53",
+    "slice": "A",
+    "luts": [
+      {
+        "slice": "A",
+        "lut": 0,
+        "init": "0100000100000000",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A0",
+            "wire": "R2C53_PLC2_A0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "B0",
+            "wire": "R2C53_PLC2_B0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          },
+          {
+            "port": "C0",
+            "wire": "R2C53_PLC2_C0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "D0",
+            "wire": "R2C53_PLC2_D0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          }
+        ],
+        "tile": "R2C53",
+        "bit_idx": 3
+      },
+      {
+        "slice": "A",
+        "lut": 1,
+        "init": "1000000001010100",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A1",
+            "wire": "R2C53_PLC2_A1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "B1",
+            "wire": "R2C53_PLC2_B1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          },
+          {
+            "port": "C1",
+            "wire": "R2C53_PLC2_C1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "D1",
+            "wire": "R2C53_PLC2_D1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          }
+        ],
+        "tile": "R2C53",
+        "bit_idx": 3
+      }
+    ],
+    "m_sel_wire": "R2C53_PLC2_M0_SLICE",
+    "m_sel_resolved": "MIB_R0C67_PIOT0_JPADDIB_PIO"
+  },
+  "4": {
+    "kind": "OFX0 (PFUMX)",
+    "tile": "R2C65",
+    "slice": "A",
+    "luts": [
+      {
+        "slice": "A",
+        "lut": 0,
+        "init": "0100000000000100",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A0",
+            "wire": "R2C65_PLC2_A0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "B0",
+            "wire": "R2C65_PLC2_B0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          },
+          {
+            "port": "C0",
+            "wire": "R2C65_PLC2_C0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "D0",
+            "wire": "R2C65_PLC2_D0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          }
+        ],
+        "tile": "R2C65",
+        "bit_idx": 4
+      },
+      {
+        "slice": "A",
+        "lut": 1,
+        "init": "0000000100010011",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A1",
+            "wire": "R2C65_PLC2_A1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          },
+          {
+            "port": "B1",
+            "wire": "R2C65_PLC2_B1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "C1",
+            "wire": "R2C65_PLC2_C1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "D1",
+            "wire": "R2C65_PLC2_D1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          }
+        ],
+        "tile": "R2C65",
+        "bit_idx": 4
+      }
+    ],
+    "m_sel_wire": "R2C65_PLC2_M0_SLICE",
+    "m_sel_resolved": "MIB_R0C67_PIOT0_JPADDIB_PIO"
+  },
+  "5": {
+    "kind": "OFX0 (PFUMX)",
+    "tile": "R2C60",
+    "slice": "A",
+    "luts": [
+      {
+        "slice": "A",
+        "lut": 0,
+        "init": "0100010001000000",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A0",
+            "wire": "R2C60_PLC2_A0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "B0",
+            "wire": "R2C60_PLC2_B0_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          },
+          {
+            "port": "C0",
+            "wire": "R2C60_PLC2_C0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "D0",
+            "wire": "R2C60_PLC2_D0_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          }
+        ],
+        "tile": "R2C60",
+        "bit_idx": 5
+      },
+      {
+        "slice": "A",
+        "lut": 1,
+        "init": "0001001000000000",
+        "mode": "LOGIC",
+        "inputs": [
+          {
+            "port": "A1",
+            "wire": "R2C60_PLC2_A1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIA"
+          },
+          {
+            "port": "B1",
+            "wire": "R2C60_PLC2_B1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIA"
+          },
+          {
+            "port": "C1",
+            "wire": "R2C60_PLC2_C1_SLICE",
+            "resolved": "MIB_R2C72_PICR0_JDIB"
+          },
+          {
+            "port": "D1",
+            "wire": "R2C60_PLC2_D1_SLICE",
+            "resolved": "MIB_R5C72_PICR0_JDIB"
+          }
+        ],
+        "tile": "R2C60",
+        "bit_idx": 5
+      }
+    ],
+    "m_sel_wire": "R2C60_PLC2_M0_SLICE",
+    "m_sel_resolved": "MIB_R0C67_PIOT0_JPADDIB_PIO"
+  },
+  "6": {
+    "resolved": "R2C54_PLC2_M0"
+  }
+}

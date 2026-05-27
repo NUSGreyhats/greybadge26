@@ -1,0 +1,11 @@
+read_verilog -I /home/hacker/Lattice-ECP5-Bitstream-Decompiler/cells verilog/main_decomp.v
+hierarchy -check -top top
+proc
+flatten
+opt -full -fine
+opt_clean -purge
+opt -fast
+opt_clean -purge
+clean -purge
+stat -top top
+write_verilog -noattr -nohex -nodec -simple-lhs verilog/main_rtl.v

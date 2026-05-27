@@ -1,0 +1,595 @@
+{
+  "summary": {
+    "total_ports": 65,
+    "mapped_to_package_site": 44,
+    "inputs": 22,
+    "outputs": 43
+  },
+  "ports": [
+    {
+      "decomp_port": "MIB_R0C67_PIOT0_JTXDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "B14",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C67",
+      "pio": "PIOA",
+      "annotated_name": "pad_B14_JTXDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R2C72_PICR0_JTXDATA4A_IOLOGIC",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R2C72_PICR0_JTXDATA4A_IOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R8C72_PICR0_DQS2_JDIA",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R8C72_PICR0_DQS2_JDIA"
+    },
+    {
+      "decomp_port": "MIB_R50C15_PICB0_JDIA",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R50C15_PICB0_JDIA"
+    },
+    {
+      "decomp_port": "G_HPBX0000",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "G_HPBX0000"
+    },
+    {
+      "decomp_port": "MIB_R0C18_PIOT0_JPADDIB_PIO",
+      "direction": "input",
+      "package_site": "A5",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C18",
+      "pio": "PIOA",
+      "annotated_name": "pad_A5_JPADDIB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C60_PIOT0_PADDTA_PIO",
+      "direction": "output",
+      "package_site": "B13",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C60",
+      "pio": "PIOA",
+      "annotated_name": "pad_B13_PADDTA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C29_PIOT0_PADDTB_PIO",
+      "direction": "output",
+      "package_site": "A7",
+      "io_type": "LVTTL33",
+      "tile": "MIB_R0C29",
+      "pio": "PIOA",
+      "annotated_name": "pad_A7_PADDTB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R5C72_PICR0_JTXDATA0A_IOLOGIC",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R5C72_PICR0_JTXDATA0A_IOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C29_PIOT0_JTXDATA0B_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A7",
+      "io_type": "LVTTL33",
+      "tile": "MIB_R0C29",
+      "pio": "PIOA",
+      "annotated_name": "pad_A7_JTXDATA0B_SIOLOGIC"
+    },
+    {
+      "decomp_port": "CIB_R1C39_CIB_JD7",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "CIB_R1C39_CIB_JD7"
+    },
+    {
+      "decomp_port": "MIB_R5C72_PICR0_JDIB",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R5C72_PICR0_JDIB"
+    },
+    {
+      "decomp_port": "MIB_R0C42_PIOT0_JPADDIB_PIO",
+      "direction": "input",
+      "package_site": "A9",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C42",
+      "pio": "PIOA",
+      "annotated_name": "pad_A9_JPADDIB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C42_PIOT0_PADDTB_PIO",
+      "direction": "output",
+      "package_site": "A9",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C42",
+      "pio": "PIOA",
+      "annotated_name": "pad_A9_PADDTB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C22_PIOT0_JTXDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "C6",
+      "io_type": "unknown",
+      "tile": "MIB_R0C22",
+      "pio": "PIOA",
+      "annotated_name": "pad_C6_JTXDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C42_PIOT0_PADDTA_PIO",
+      "direction": "output",
+      "package_site": "A9",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C42",
+      "pio": "PIOA",
+      "annotated_name": "pad_A9_PADDTA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C60_PIOT0_PADDOA_PIO",
+      "direction": "output",
+      "package_site": "B13",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C60",
+      "pio": "PIOA",
+      "annotated_name": "pad_B13_PADDOA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C56_PIOT0_PADDOA_PIO",
+      "direction": "output",
+      "package_site": "B12",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C56",
+      "pio": "PIOA",
+      "annotated_name": "pad_B12_PADDOA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C13_PIOT0_PADDOB_PIO",
+      "direction": "output",
+      "package_site": "E5",
+      "io_type": "unknown",
+      "tile": "MIB_R0C13",
+      "pio": "PIOA",
+      "annotated_name": "pad_E5_PADDOB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C42_PIOT0_PADDOA_PIO",
+      "direction": "output",
+      "package_site": "A9",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C42",
+      "pio": "PIOA",
+      "annotated_name": "pad_A9_PADDOA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C65_PIOT0_JTXDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A13",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C65",
+      "pio": "PIOA",
+      "annotated_name": "pad_A13_JTXDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C56_PIOT0_JTSDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "B12",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C56",
+      "pio": "PIOA",
+      "annotated_name": "pad_B12_JTSDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C53_PIOT0_JTSDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A11",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C53",
+      "pio": "PIOA",
+      "annotated_name": "pad_A11_JTSDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C65_PIOT0_JTSDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A13",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C65",
+      "pio": "PIOA",
+      "annotated_name": "pad_A13_JTSDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R2C0_PICL0_JTXDATA4C_IOLOGIC",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R2C0_PICL0_JTXDATA4C_IOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C6_PIOT0_PADDTA_PIO",
+      "direction": "output",
+      "package_site": "A3",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C6",
+      "pio": "PIOA",
+      "annotated_name": "pad_A3_PADDTA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R2C0_PICL0_JTXDATA0C_IOLOGIC",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R2C0_PICL0_JTXDATA0C_IOLOGIC"
+    },
+    {
+      "decomp_port": "G_HPBX0100",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "G_HPBX0100"
+    },
+    {
+      "decomp_port": "MIB_R0C6_PIOT0_JTSDATA0B_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A3",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C6",
+      "pio": "PIOA",
+      "annotated_name": "pad_A3_JTSDATA0B_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C44_PIOT0_PADDTA_PIO",
+      "direction": "output",
+      "package_site": "B10",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C44",
+      "pio": "PIOA",
+      "annotated_name": "pad_B10_PADDTA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C49_PIOT0_PADDOA_PIO",
+      "direction": "output",
+      "package_site": "B11",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C49",
+      "pio": "PIOA",
+      "annotated_name": "pad_B11_PADDOA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C29_PIOT0_JPADDIB_PIO",
+      "direction": "input",
+      "package_site": "A7",
+      "io_type": "LVTTL33",
+      "tile": "MIB_R0C29",
+      "pio": "PIOA",
+      "annotated_name": "pad_A7_JPADDIB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C29_PIOT0_JPADDIA_PIO",
+      "direction": "input",
+      "package_site": "A7",
+      "io_type": "LVTTL33",
+      "tile": "MIB_R0C29",
+      "pio": "PIOA",
+      "annotated_name": "pad_A7_JPADDIA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R11C72_PICR0_JPADDID_PIO",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R11C72_PICR0_JPADDID_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C42_PIOT0_JPADDIA_PIO",
+      "direction": "input",
+      "package_site": "A9",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C42",
+      "pio": "PIOA",
+      "annotated_name": "pad_A9_JPADDIA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C49_PIOT0_JTSDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "B11",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C49",
+      "pio": "PIOA",
+      "annotated_name": "pad_B11_JTSDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C53_PIOT0_PADDOB_PIO",
+      "direction": "output",
+      "package_site": "A11",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C53",
+      "pio": "PIOA",
+      "annotated_name": "pad_A11_PADDOB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C15_PIOT0_PADDOA_PIO",
+      "direction": "output",
+      "package_site": "C5",
+      "io_type": "unknown",
+      "tile": "MIB_R0C15",
+      "pio": "PIOA",
+      "annotated_name": "pad_C5_PADDOA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C42_PIOT0_JTXDATA0B_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A9",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C42",
+      "pio": "PIOA",
+      "annotated_name": "pad_A9_JTXDATA0B_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C15_PIOT0_JPADDIB_PIO",
+      "direction": "input",
+      "package_site": "C5",
+      "io_type": "unknown",
+      "tile": "MIB_R0C15",
+      "pio": "PIOA",
+      "annotated_name": "pad_C5_JPADDIB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C20_PIOT0_JTXDATA0B_SIOLOGIC",
+      "direction": "output",
+      "package_site": "E6",
+      "io_type": "unknown",
+      "tile": "MIB_R0C20",
+      "pio": "PIOA",
+      "annotated_name": "pad_E6_JTXDATA0B_SIOLOGIC"
+    },
+    {
+      "decomp_port": "CIB_R1C24_CIB_JD7",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "CIB_R1C24_CIB_JD7"
+    },
+    {
+      "decomp_port": "MIB_R5C72_PICR0_JDIA",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R5C72_PICR0_JDIA"
+    },
+    {
+      "decomp_port": "MIB_R0C53_PIOT0_JTXDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A11",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C53",
+      "pio": "PIOA",
+      "annotated_name": "pad_A11_JTXDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R5C72_PICR0_PADDOB_PIO",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R5C72_PICR0_PADDOB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R2C72_PICR0_JDIB",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R2C72_PICR0_JDIB"
+    },
+    {
+      "decomp_port": "MIB_R2C72_PICR0_JDIA",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R2C72_PICR0_JDIA"
+    },
+    {
+      "decomp_port": "G_HPBX0300",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "G_HPBX0300"
+    },
+    {
+      "decomp_port": "G_HPBX0200",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "G_HPBX0200"
+    },
+    {
+      "decomp_port": "MIB_R2C72_PICR0_JTXDATA0A_IOLOGIC",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R2C72_PICR0_JTXDATA0A_IOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C67_PIOT0_JTSDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "B14",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C67",
+      "pio": "PIOA",
+      "annotated_name": "pad_B14_JTSDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C65_PIOT0_PADDTB_PIO",
+      "direction": "output",
+      "package_site": "A13",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C65",
+      "pio": "PIOA",
+      "annotated_name": "pad_A13_PADDTB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C6_PIOT0_JPADDIA_PIO",
+      "direction": "input",
+      "package_site": "A3",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C6",
+      "pio": "PIOA",
+      "annotated_name": "pad_A3_JPADDIA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C35_PIOT0_JTSDATA0B_SIOLOGIC",
+      "direction": "output",
+      "package_site": "C8",
+      "io_type": "unknown",
+      "tile": "MIB_R0C35",
+      "pio": "PIOA",
+      "annotated_name": "pad_C8_JTSDATA0B_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C38_PIOT0_PADDTA_PIO",
+      "direction": "output",
+      "package_site": "B9",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C38",
+      "pio": "PIOA",
+      "annotated_name": "pad_B9_PADDTA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C6_PIOT0_PADDOA_PIO",
+      "direction": "output",
+      "package_site": "A3",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C6",
+      "pio": "PIOA",
+      "annotated_name": "pad_A3_PADDOA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C9_PIOT0_JTXDATA0B_SIOLOGIC",
+      "direction": "output",
+      "package_site": "E4",
+      "io_type": "unknown",
+      "tile": "MIB_R0C9",
+      "pio": "PIOA",
+      "annotated_name": "pad_E4_JTXDATA0B_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C22_PIOT0_JPADDIB_PIO",
+      "direction": "input",
+      "package_site": "C6",
+      "io_type": "unknown",
+      "tile": "MIB_R0C22",
+      "pio": "PIOA",
+      "annotated_name": "pad_C6_JPADDIB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C11_PIOT0_JTXDATA0A_SIOLOGIC",
+      "direction": "output",
+      "package_site": "C4",
+      "io_type": "unknown",
+      "tile": "MIB_R0C11",
+      "pio": "PIOA",
+      "annotated_name": "pad_C4_JTXDATA0A_SIOLOGIC"
+    },
+    {
+      "decomp_port": "MIB_R0C53_PIOT0_PADDTB_PIO",
+      "direction": "output",
+      "package_site": "A11",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C53",
+      "pio": "PIOA",
+      "annotated_name": "pad_A11_PADDTB_PIO"
+    },
+    {
+      "decomp_port": "CIB_R1C25_CIB_JD7",
+      "direction": "output",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "CIB_R1C25_CIB_JD7"
+    },
+    {
+      "decomp_port": "MIB_R0C67_PIOT0_JPADDIB_PIO",
+      "direction": "input",
+      "package_site": "B14",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C67",
+      "pio": "PIOA",
+      "annotated_name": "pad_B14_JPADDIB_PIO"
+    },
+    {
+      "decomp_port": "MIB_R8C72_PICR0_DQS2_JDIB",
+      "direction": "input",
+      "package_site": "",
+      "io_type": "",
+      "tile": "",
+      "pio": "",
+      "annotated_name": "MIB_R8C72_PICR0_DQS2_JDIB"
+    },
+    {
+      "decomp_port": "MIB_R0C18_PIOT0_JPADDIA_PIO",
+      "direction": "input",
+      "package_site": "A5",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C18",
+      "pio": "PIOA",
+      "annotated_name": "pad_A5_JPADDIA_PIO"
+    },
+    {
+      "decomp_port": "MIB_R0C65_PIOT0_JTXDATA0B_SIOLOGIC",
+      "direction": "output",
+      "package_site": "A13",
+      "io_type": "LVCMOS25",
+      "tile": "MIB_R0C65",
+      "pio": "PIOA",
+      "annotated_name": "pad_A13_JTXDATA0B_SIOLOGIC"
+    }
+  ]
+}

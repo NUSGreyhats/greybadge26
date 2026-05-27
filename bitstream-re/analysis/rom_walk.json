@@ -1,0 +1,250 @@
+[
+  {
+    "pmod": "pmod_j2[0]",
+    "ball": "A14",
+    "tile": "R2C64",
+    "slice": "C",
+    "lut": 1,
+    "init": "1111000011111111",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A5",
+        "R2C64_PLC2_A5_SLICE",
+        "R2C64_PLC2_A5"
+      ],
+      [
+        "B5",
+        "R2C64_PLC2_B5_SLICE",
+        "R2C64_PLC2_B5"
+      ],
+      [
+        "C5",
+        "R2C64_PLC2_C5_SLICE",
+        "R2C64_PLC2_Q1_SLICE"
+      ],
+      [
+        "D5",
+        "R2C64_PLC2_D5_SLICE",
+        "R2C54_PLC2_F0_SLICE"
+      ]
+    ]
+  },
+  {
+    "pmod": "pmod_j2[1]",
+    "ball": "A13",
+    "tile": "R2C60",
+    "slice": "B",
+    "lut": 0,
+    "init": "1111111101010101",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A2",
+        "R2C60_PLC2_A2_SLICE",
+        "R2C54_PLC2_F0_SLICE"
+      ],
+      [
+        "B2",
+        "R2C60_PLC2_B2_SLICE",
+        "R2C60_PLC2_B2"
+      ],
+      [
+        "C2",
+        "R2C60_PLC2_C2_SLICE",
+        "R2C60_PLC2_C2"
+      ],
+      [
+        "D2",
+        "R2C60_PLC2_D2_SLICE",
+        "R2C57_PLC2_Q5_SLICE"
+      ]
+    ]
+  },
+  {
+    "pmod": "pmod_j2[2]",
+    "ball": "A12",
+    "tile": "R2C53",
+    "slice": "B",
+    "lut": 1,
+    "init": "1111111100001111",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A3",
+        "R2C53_PLC2_A3_SLICE",
+        "R2C53_PLC2_A3"
+      ],
+      [
+        "B3",
+        "R2C53_PLC2_B3_SLICE",
+        "R2C53_PLC2_B3"
+      ],
+      [
+        "C3",
+        "R2C53_PLC2_C3_SLICE",
+        "R2C54_PLC2_F0_SLICE"
+      ],
+      [
+        "D3",
+        "R2C53_PLC2_D3_SLICE",
+        "R2C55_PLC2_Q4_SLICE"
+      ]
+    ]
+  },
+  {
+    "pmod": "pmod_j2[3]",
+    "ball": "A11",
+    "tile": "R2C53",
+    "slice": "C",
+    "lut": 0,
+    "init": "1111010111110101",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A4",
+        "R2C53_PLC2_A4_SLICE",
+        "R2C54_PLC2_F0_SLICE"
+      ],
+      [
+        "B4",
+        "R2C53_PLC2_B4_SLICE",
+        "R2C53_PLC2_B4"
+      ],
+      [
+        "C4",
+        "R2C53_PLC2_C4_SLICE",
+        "R2C53_PLC2_Q3_SLICE"
+      ],
+      [
+        "D4",
+        "R2C53_PLC2_D4_SLICE",
+        "R2C53_PLC2_D4"
+      ]
+    ]
+  },
+  {
+    "pmod": "pmod_j2[4]",
+    "ball": "B14",
+    "tile": "R2C65",
+    "slice": "B",
+    "lut": 1,
+    "init": "1111000011111111",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A3",
+        "R2C65_PLC2_A3_SLICE",
+        "R2C65_PLC2_A3"
+      ],
+      [
+        "B3",
+        "R2C65_PLC2_B3_SLICE",
+        "R2C65_PLC2_B3"
+      ],
+      [
+        "C3",
+        "R2C65_PLC2_C3_SLICE",
+        "R2C65_PLC2_Q2_SLICE"
+      ],
+      [
+        "D3",
+        "R2C65_PLC2_D3_SLICE",
+        "R2C54_PLC2_F0_SLICE"
+      ]
+    ]
+  },
+  {
+    "pmod": "pmod_j2[5]",
+    "ball": "B13",
+    "tile": "R2C60",
+    "slice": "D",
+    "lut": 0,
+    "init": "1111000011111111",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A6",
+        "R2C60_PLC2_A6_SLICE",
+        "R2C60_PLC2_A6"
+      ],
+      [
+        "B6",
+        "R2C60_PLC2_B6_SLICE",
+        "R2C60_PLC2_B6"
+      ],
+      [
+        "C6",
+        "R2C60_PLC2_C6_SLICE",
+        "R2C60_PLC2_Q3_SLICE"
+      ],
+      [
+        "D6",
+        "R2C60_PLC2_D6_SLICE",
+        "R2C54_PLC2_F0_SLICE"
+      ]
+    ]
+  },
+  {
+    "pmod": "pmod_j2[6]",
+    "ball": "B12",
+    "tile": "R2C55",
+    "slice": "B",
+    "lut": 1,
+    "init": "1010101000000000",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A3",
+        "R2C55_PLC2_A3_SLICE",
+        "R2C54_PLC2_F0_SLICE"
+      ],
+      [
+        "B3",
+        "R2C55_PLC2_B3_SLICE",
+        "R2C55_PLC2_B3"
+      ],
+      [
+        "C3",
+        "R2C55_PLC2_C3_SLICE",
+        "R2C55_PLC2_C3"
+      ],
+      [
+        "D3",
+        "R2C55_PLC2_D3_SLICE",
+        "R2C54_PLC2_Q0_SLICE"
+      ]
+    ]
+  },
+  {
+    "pmod": "pmod_j2[7]",
+    "ball": "B11",
+    "tile": "R11C10",
+    "slice": "C",
+    "lut": 0,
+    "init": "0000000000000000",
+    "mode": "LOGIC",
+    "inputs": [
+      [
+        "A4",
+        "R11C10_PLC2_A4_SLICE",
+        "R11C10_PLC2_A4"
+      ],
+      [
+        "B4",
+        "R11C10_PLC2_B4_SLICE",
+        "R11C10_PLC2_B4"
+      ],
+      [
+        "C4",
+        "R11C10_PLC2_C4_SLICE",
+        "R11C10_PLC2_C4"
+      ],
+      [
+        "D4",
+        "R11C10_PLC2_D4_SLICE",
+        "R11C10_PLC2_D4"
+      ]
+    ]
+  }
+]

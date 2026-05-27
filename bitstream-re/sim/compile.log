@@ -1,0 +1,110 @@
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.
+./cells_sim.v:929: warning: Port 2 (ADW) of PDPW16KD expects 9 bits, got 14.
+./cells_sim.v:929:        : Pruning 5 high bits of the expression.

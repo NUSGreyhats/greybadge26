@@ -1,0 +1,23 @@
+read_verilog verilog/main_behavior.v
+hierarchy -check -top top
+opt_clean -purge
+
+# Used package-mapped output pads (from analysis/port_map.csv, dedup by pad)
+submod -name cone_A11_TXa o:MIB_R0C53_PIOT0_JTXDATA0A_SIOLOGIC %ci*
+submod -name cone_A11_TSa o:MIB_R0C53_PIOT0_JTSDATA0A_SIOLOGIC %ci*
+submod -name cone_A11_OB  o:MIB_R0C53_PIOT0_PADDOB_PIO        %ci*
+submod -name cone_A13_TXa o:MIB_R0C65_PIOT0_JTXDATA0A_SIOLOGIC %ci*
+submod -name cone_A13_TSa o:MIB_R0C65_PIOT0_JTSDATA0A_SIOLOGIC %ci*
+submod -name cone_A3_OA   o:MIB_R0C6_PIOT0_PADDOA_PIO         %ci*
+submod -name cone_A7_TXb  o:MIB_R0C29_PIOT0_JTXDATA0B_SIOLOGIC %ci*
+submod -name cone_B11_OA  o:MIB_R0C49_PIOT0_PADDOA_PIO        %ci*
+submod -name cone_B12_TSa o:MIB_R0C56_PIOT0_JTSDATA0A_SIOLOGIC %ci*
+submod -name cone_B13_OA  o:MIB_R0C60_PIOT0_PADDOA_PIO        %ci*
+submod -name cone_B14_TXa o:MIB_R0C67_PIOT0_JTXDATA0A_SIOLOGIC %ci*
+submod -name cone_C4_TXa  o:MIB_R2C0_PICL0_JTXDATA0C_IOLOGIC  %ci*
+submod -name cone_C8_TSb  o:MIB_R0C20_PIOT0_JTXDATA0B_SIOLOGIC %ci*
+submod -name cone_D9_TXa  o:MIB_R5C72_PICR0_JTXDATA0A_IOLOGIC %ci*
+
+opt_clean -purge
+write_verilog -noattr -nohex -nodec -simple-lhs verilog/main_pad_cones.v
+stat

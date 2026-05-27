@@ -1,0 +1,8 @@
+# Large generated artifacts — regenerate with scripts in README.md
+main.config
+main_roundtrip.bit
+analysis/ebr_init.hex
+verilog/main_decomp.v
+verilog/main_synth.v
+verilog/main_behavior.v
+verilog/main_behavior_noinit.v

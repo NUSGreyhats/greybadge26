@@ -1,0 +1,10 @@
+read_verilog verilog/main_synth.v
+hierarchy -check -top top
+flatten
+opt_clean -purge
+opt -full -fine
+opt -fast
+opt_clean -purge
+clean -purge
+stat -top top
+write_verilog -noattr -nohex -nodec -simple-lhs verilog/main_behavior.v
