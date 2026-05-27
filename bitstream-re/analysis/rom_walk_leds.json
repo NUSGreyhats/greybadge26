@@ -1,0 +1,42 @@
+{
+  "D1": {
+    "ball": "C3",
+    "pad_wire": "MIB_R2C0_PICL0_JTXDATA0C_IOLOGIC",
+    "terminal": "R2C7_PLC2_F5A_SLICE"
+  },
+  "D2": {
+    "ball": "C5",
+    "pad_wire": "MIB_R0C15_PIOT0_PADDOA_PIO",
+    "terminal": "R2C11_PLC2_F5_SLICE"
+  },
+  "D3": {
+    "ball": "D3",
+    "pad_wire": "MIB_R2C0_PICL0_JTXDATA0D_IOLOGIC",
+    "terminal": "R2C10_PLC2_F6_SLICE"
+  },
+  "D4": {
+    "ball": "D5",
+    "pad_wire": "MIB_R0C13_PIOT0_PADDOB_PIO",
+    "terminal": "R2C11_PLC2_F1_SLICE"
+  },
+  "D5": {
+    "ball": "C4",
+    "pad_wire": "MIB_R0C11_PIOT0_PADDOA_PIO",
+    "terminal": "R2C9_PLC2_FXA_SLICE"
+  },
+  "D6": {
+    "ball": "C6",
+    "pad_wire": "MIB_R0C22_PIOT0_PADDOA_PIO",
+    "terminal": "R2C11_PLC2_F3_SLICE"
+  },
+  "D7": {
+    "ball": "D6",
+    "pad_wire": "MIB_R0C20_PIOT0_PADDOB_PIO",
+    "terminal": "R2C11_PLC2_F6_SLICE"
+  },
+  "D8": {
+    "ball": "D4",
+    "pad_wire": "MIB_R0C9_PIOT0_PADDOB_PIO",
+    "terminal": "R2C7_PLC2_F5_SLICE"
+  }
+}
