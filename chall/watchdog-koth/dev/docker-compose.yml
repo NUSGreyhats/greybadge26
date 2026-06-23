@@ -1,0 +1,19 @@
+services:
+  ctfd:
+    image: ${CTFD_IMAGE:-ctfd/ctfd:3.8.6}
+    ports:
+      - "${CTFD_PORT:-8000}:8000"
+    environment:
+      SECRET_KEY: ${SECRET_KEY:-watchdog-koth-dev-secret}
+      DATABASE_URL: sqlite:////var/uploads/ctfd.db
+      UPLOAD_FOLDER: /var/uploads
+      LOG_FOLDER: /var/log/CTFd
+      REVERSE_PROXY: "false"
+    volumes:
+      - ../ctfd-plugin/watchdog_koth:/opt/CTFd/CTFd/plugins/watchdog_koth:ro
+      - ctfd_uploads:/var/uploads
+      - ctfd_logs:/var/log/CTFd
+
+volumes:
+  ctfd_uploads:
+  ctfd_logs:

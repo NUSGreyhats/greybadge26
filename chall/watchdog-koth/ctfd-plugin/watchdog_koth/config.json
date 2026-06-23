@@ -1,0 +1,7 @@
+{
+  "name": "Watchdog KOTH",
+  "route": "/admin/watchdog-koth",
+  "description": "Manual GreyMecha watchdog KOTH cycle scoring for CTFd teams.",
+  "version": "0.1.0",
+  "author": "NUS Greyhats"
+}

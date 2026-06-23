@@ -52,13 +52,11 @@ Developers
     - Artwork & Animations (They are so cute man)
 4. Fieash
     - Bricked Up Challenge
-5. sunshinefactory
-    - zip file
-6. Codekrodile
+5. Codekrodile
     - mirrortune
-7. khian
+6. khian
     - Asteroids
-8. sayomaki
+7. sayomaki
     - Bad Apple
 
 Thanks to these people for helping

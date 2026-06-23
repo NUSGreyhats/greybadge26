@@ -1,0 +1,143 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Watchdog KOTH</h1>
+    <p>Manual GreyMecha cycle-count scoring for the watchdog KOTH challenge.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Settings</h3>
+      <form method="post" action="{{ url_for('watchdog_koth_settings') }}">
+        <input type="hidden" name="nonce" value="{{ Session.nonce }}">
+        <div class="form-group">
+          <label for="challenge_name">Challenge name</label>
+          <input id="challenge_name" name="challenge_name" class="form-control" value="{{ settings.challenge_name or defaults.challenge_name }}">
+        </div>
+        <div class="form-group">
+          <label for="challenge_category">Category</label>
+          <input id="challenge_category" name="challenge_category" class="form-control" value="{{ settings.challenge_category or defaults.challenge_category }}">
+        </div>
+        <div class="form-group">
+          <label for="award_name">Award name</label>
+          <input id="award_name" name="award_name" class="form-control" value="{{ settings.award_name }}">
+        </div>
+        <div class="form-group">
+          <label for="max_points">Max points</label>
+          <input id="max_points" name="max_points" type="number" min="0" class="form-control" value="{{ settings.max_points }}">
+        </div>
+        <div class="form-group">
+          <label for="min_points">Min points</label>
+          <input id="min_points" name="min_points" type="number" min="0" class="form-control" value="{{ settings.min_points }}">
+        </div>
+        <div class="form-group">
+          <label for="challenge_description">Description</label>
+          <textarea id="challenge_description" name="challenge_description" class="form-control" rows="5">{{ settings.challenge_description or defaults.challenge_description }}</textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Save settings</button>
+      </form>
+
+      <form class="mt-3" method="post" action="{{ url_for('watchdog_koth_resync') }}">
+        <input type="hidden" name="nonce" value="{{ Session.nonce }}">
+        <button class="btn btn-secondary" type="submit">Resync all</button>
+      </form>
+    </div>
+
+    <div class="col-md-8">
+      <h3>Add cycle run</h3>
+      <form class="form-inline mb-4" method="post" action="{{ url_for('watchdog_koth_add_run') }}">
+        <input type="hidden" name="nonce" value="{{ Session.nonce }}">
+        <select name="team_id" class="form-control mr-2" required>
+          <option value="">Team</option>
+          {% for team, score in teams_with_scores %}
+          <option value="{{ team.id }}">{{ team.name }}</option>
+          {% endfor %}
+        </select>
+        <input name="cycles" type="number" min="1" class="form-control mr-2" placeholder="Cycles" required>
+        <input name="note" class="form-control mr-2" placeholder="Note">
+        <button class="btn btn-primary" type="submit">Save run</button>
+      </form>
+
+      <h3>Teams</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Best cycles</th>
+            <th>Score</th>
+            <th>Solve</th>
+            <th>Award</th>
+            <th>Sync</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for team, score in teams_with_scores %}
+          <tr>
+            <td>{{ team.name }}</td>
+            <td>{{ score.best_cycles if score and score.best_cycles else "-" }}</td>
+            <td>{{ score.score if score and score.score is not none else "-" }}</td>
+            <td>{{ score.solve_id if score and score.solve_id else "-" }}</td>
+            <td>{{ score.award_id if score and score.award_id else "-" }}</td>
+            <td>
+              {% if score and score.sync_error %}
+              <span class="badge badge-danger">{{ score.sync_error }}</span>
+              {% elif score and score.synced_at %}
+              <span class="badge badge-success">Synced</span>
+              {% else %}
+              <span class="badge badge-secondary">No score</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h3>Recent runs</h3>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Team</th>
+            <th>Cycles</th>
+            <th>Note</th>
+            <th>Created</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for run in recent_runs %}
+          <tr>
+            <td>{{ run.id }}</td>
+            <td>{{ teams_by_id.get(run.team_id).name if teams_by_id.get(run.team_id) else run.team_id }}</td>
+            <td>{{ run.cycles }}</td>
+            <td>{{ run.note or "" }}</td>
+            <td>{{ run.created_at }}</td>
+            <td>
+              {% if run.voided_at %}
+              <span class="badge badge-warning">Voided</span>
+              {% else %}
+              <span class="badge badge-success">Active</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if not run.voided_at %}
+              <form method="post" action="{{ url_for('watchdog_koth_void_run', run_id=run.id) }}">
+                <input type="hidden" name="nonce" value="{{ Session.nonce }}">
+                <input type="hidden" name="void_reason" value="Voided from admin table">
+                <button class="btn btn-sm btn-warning" type="submit">Void</button>
+              </form>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
