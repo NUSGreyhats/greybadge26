@@ -1,0 +1,11 @@
+# ESP-IDF build outputs
+build/
+.pio/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
