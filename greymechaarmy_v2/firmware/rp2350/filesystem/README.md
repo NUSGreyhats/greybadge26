@@ -2,6 +2,8 @@
 
 This is the GreyMecha/Army Firmware (for the RP part anyway). It's based off circuitpython, and includes various challenges.
 
+Updated for GreyCTF 2026
+
 
 ## Images
 
@@ -15,18 +17,7 @@ You may also use EzGif to resize to 240 x 240 pixels. https://ezgif.com/maker
 
 ## Challenges
 
-There are 2 kinds of challenges. 
-`grey` challenges are ones which are released for GreyCTF 2025 Finals. If you are a finalist, you only need to care about these.
-`fun` challenges, meanwhile, are just ones for fun. 
-
-Grey Challenges
-1. Hornet Revenge
-2. Leaky Pin
-3. Bricked Up
-3. Shooting Flags
-4. Secure Memory
-5. CatCore
-
+Can look in the `chall` folder
 
 ## Updates
 
@@ -58,6 +49,9 @@ Developers
     - Asteroids
 7. sayomaki
     - Bad Apple
+    - PMOD Routing
+8. Restia
+    - carrying
 
 Thanks to these people for helping
 
