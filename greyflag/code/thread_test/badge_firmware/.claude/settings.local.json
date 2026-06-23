@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/user/.espressif/v6.0.1/esp-idf/components/openthread/openthread/src/core/meshcop/**)",
+      "Bash(grep -rn \"ecjpake\\\\|ECJPAKE\\\\|mbedtls_ssl_set_hs_ecjpake\" /home/user/.espressif/v6.0.1/esp-idf/components/mbedtls/mbedtls/include/ 2>/dev/null | head -20)",
+      "Read(//home/user/.espressif/v6.0.1/esp-idf/components/mbedtls/mbedtls/include/**)"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "idf.customExtraVars": {},
+  "idf.currentSetup": "/home/user/.espressif/v6.0.1/esp-idf",
+  "idf.port": "/dev/ttyACM0",
+  "idf.openOcdConfigs": [
+    "board/esp32c6-builtin.cfg"
+  ]
+}

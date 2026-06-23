@@ -1,0 +1,18 @@
+# OpenThread - minimal thread device (joins only, does not route)
+CONFIG_OPENTHREAD_ENABLED=y
+CONFIG_OPENTHREAD_MTD=y
+CONFIG_OPENTHREAD_JOINER=y
+
+# NO CLI - UART is output-only after the banner
+CONFIG_OPENTHREAD_CLI=n
+
+# Suppress all OpenThread internal log output
+# Comment this out if you want to see join progress during development
+CONFIG_LOG_DEFAULT_LEVEL_NONE=y
+
+# mbedTLS: DTLS and EC-JPAKE required by OpenThread secure transport (DTLS 1.2 + ECJPAKE ciphersuite)
+CONFIG_MBEDTLS_SSL_PROTO_DTLS=y
+CONFIG_MBEDTLS_SSL_COOKIE_C=y
+CONFIG_MBEDTLS_ECJPAKE_C=y
+CONFIG_MBEDTLS_KEY_EXCHANGE_ECJPAKE=y
+
