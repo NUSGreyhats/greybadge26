@@ -72,6 +72,7 @@
             <th>Solve</th>
             <th>Award</th>
             <th>Sync</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -89,6 +90,16 @@
               <span class="badge badge-success">Synced</span>
               {% else %}
               <span class="badge badge-secondary">No score</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if score and score.score is not none %}
+              <form method="post" action="{{ url_for('watchdog_koth_delete_score', team_id=team.id) }}">
+                <input type="hidden" name="nonce" value="{{ Session.nonce }}">
+                <button class="btn btn-sm btn-danger" type="submit">Delete score</button>
+              </form>
+              {% else %}
+              -
               {% endif %}
             </td>
           </tr>

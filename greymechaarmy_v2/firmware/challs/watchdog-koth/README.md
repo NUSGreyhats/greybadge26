@@ -31,12 +31,12 @@ The plugin creates or updates:
 From the repository root:
 
 ```powershell
-python -m unittest chall/watchdog-koth/tests/test_scoring.py
+python -m unittest greymechaarmy_v2/firmware/challs/watchdog-koth/tests/test_scoring.py
 ```
 
 ## Local CTFd Smoke Test
 
-From `chall/watchdog-koth/dev`:
+From `greymechaarmy_v2/firmware/challs/watchdog-koth/dev`:
 
 ```powershell
 docker compose up -d
@@ -55,17 +55,19 @@ Enter cycle counts for the teams and verify:
 - CTFd shows the plugin-managed `Watchdog KOTH` challenge,
 - teams with cycle entries have a solve for that challenge,
 - the native CTFd scoreboard includes the KOTH Award points.
+- **Delete score** clears a team's active KOTH score by voiding that team's
+  active runs and removing its synced CTFd solve and award.
 
 Use **Resync all** if CTFd awards or solves are edited outside the plugin.
 
 You can seed a disposable local smoke dataset from the repository root:
 
 ```powershell
-docker compose -f chall/watchdog-koth/dev/docker-compose.yml cp chall/watchdog-koth/dev/smoke_seed.py ctfd:/tmp/watchdog_smoke_seed.py
-docker compose -f chall/watchdog-koth/dev/docker-compose.yml exec -T ctfd sh -lc "PYTHONPATH=/opt/CTFd /opt/venv/bin/python /tmp/watchdog_smoke_seed.py"
+docker compose -f greymechaarmy_v2/firmware/challs/watchdog-koth/dev/docker-compose.yml cp greymechaarmy_v2/firmware/challs/watchdog-koth/dev/smoke_seed.py ctfd:/tmp/watchdog_smoke_seed.py
+docker compose -f greymechaarmy_v2/firmware/challs/watchdog-koth/dev/docker-compose.yml exec -T ctfd sh -lc "PYTHONPATH=/opt/CTFd /opt/venv/bin/python /tmp/watchdog_smoke_seed.py"
 ```
 
 The seeded admin login is `watchdog-admin` / `watchdog-password`. The smoke
 script resets Watchdog KOTH plugin rows in the local CTFd database, creates two
-teams, inserts cycle runs, syncs CTFd solves and awards, and checks that the
-scoreboard API returns HTTP 200.
+teams, inserts cycle runs, syncs CTFd solves and awards, checks score deletion,
+and checks that the scoreboard API returns HTTP 200.

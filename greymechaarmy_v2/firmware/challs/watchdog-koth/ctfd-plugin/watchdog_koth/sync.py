@@ -120,16 +120,20 @@ def _upsert_award(score_row, team, user, settings, current_score):
 
 
 def _delete_artifacts(score_row):
-    if score_row.solve_id:
-        solve = Solves.query.get(score_row.solve_id)
-        if solve is not None:
-            db.session.delete(solve)
-    if score_row.award_id:
-        award = Awards.query.get(score_row.award_id)
-        if award is not None:
-            db.session.delete(award)
+    solve_id = score_row.solve_id
+    award_id = score_row.award_id
     score_row.solve_id = None
     score_row.award_id = None
+    db.session.flush()
+
+    if solve_id:
+        solve = Solves.query.get(solve_id)
+        if solve is not None:
+            db.session.delete(solve)
+    if award_id:
+        award = Awards.query.get(award_id)
+        if award is not None:
+            db.session.delete(award)
 
 
 def _cache_clear():
@@ -137,6 +141,21 @@ def _cache_clear():
         cache.clear()
     except Exception:
         pass
+
+
+def clear_team_score(team_id, admin_user_id=None, reason=None):
+    now = datetime.utcnow()
+    reason = reason or "Score deleted by admin"
+    active_runs = WatchdogKothRun.query.filter_by(
+        team_id=team_id,
+        voided_at=None,
+    ).all()
+    for run in active_runs:
+        run.voided_at = now
+        run.voided_by_user_id = admin_user_id
+        run.void_reason = reason
+    db.session.commit()
+    return recompute_and_sync()
 
 
 def recompute_and_sync():

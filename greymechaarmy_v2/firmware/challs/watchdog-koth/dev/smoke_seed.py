@@ -6,7 +6,11 @@ from CTFd.plugins.watchdog_koth.models import (
     WatchdogKothScore,
     get_settings,
 )
-from CTFd.plugins.watchdog_koth.sync import AWARD_CATEGORY, recompute_and_sync
+from CTFd.plugins.watchdog_koth.sync import (
+    AWARD_CATEGORY,
+    clear_team_score,
+    recompute_and_sync,
+)
 
 
 ADMIN_NAME = "watchdog-admin"
@@ -152,10 +156,23 @@ def main():
         response = client.get("/api/v1/scoreboard")
         assert response.status_code == 200
 
+        clear_team_score(beta.id, admin.id, "smoke delete score")
+        alpha_score = WatchdogKothScore.query.get(alpha.id)
+        beta_score = WatchdogKothScore.query.get(beta.id)
+        solve_count = Solves.query.filter_by(challenge_id=challenge.id).count()
+        award_count = Awards.query.filter_by(category=AWARD_CATEGORY).count()
+
+        assert alpha_score.score == 500
+        assert beta_score.score is None
+        assert beta_score.solve_id is None
+        assert beta_score.award_id is None
+        assert solve_count == 1
+        assert award_count == 1
+
         print("admin={0}:{1}".format(ADMIN_NAME, ADMIN_PASSWORD))
         print("challenge_id={0}".format(challenge.id))
         print("alpha_score={0}".format(alpha_score.score))
-        print("beta_score={0}".format(beta_score.score))
+        print("beta_score_after_delete={0}".format(beta_score.score))
         print("solve_count={0}".format(solve_count))
         print("award_count={0}".format(award_count))
         print("scoreboard_status={0}".format(response.status_code))

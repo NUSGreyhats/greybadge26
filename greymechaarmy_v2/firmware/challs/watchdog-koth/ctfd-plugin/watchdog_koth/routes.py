@@ -19,7 +19,7 @@ from .models import (
     get_settings,
 )
 from .scoring import validate_cycles
-from .sync import recompute_and_sync
+from .sync import clear_team_score, recompute_and_sync
 
 
 def _current_user_id():
@@ -151,4 +151,16 @@ def register_routes(app):
     def watchdog_koth_resync():
         recompute_and_sync()
         flash("Watchdog KOTH scores resynced.", "success")
+        return redirect(url_for("watchdog_koth_admin"))
+
+    @app.route("/admin/watchdog-koth/teams/<int:team_id>/delete-score", methods=["POST"])
+    @admins_only
+    def watchdog_koth_delete_score(team_id):
+        team = Teams.query.get_or_404(team_id)
+        clear_team_score(
+            team_id=team.id,
+            admin_user_id=_current_user_id(),
+            reason="Score deleted from admin team table",
+        )
+        flash("{0}'s Watchdog KOTH score was deleted and scores resynced.".format(team.name), "success")
         return redirect(url_for("watchdog_koth_admin"))
