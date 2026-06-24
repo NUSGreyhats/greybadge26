@@ -9,7 +9,7 @@
 #define UART_TX_EMPTY 0x00000004u
 
 void uart_wait_till_tx_clear() {
-    while ((mmio_read32(UART_BASE + UART_STATUS) & UART_TX_EMPTY) == UART_TX_EMPTY) {
+    while ((mmio_read32(UART_BASE + UART_STATUS) & UART_TX_EMPTY) == 0u) { // while not empty
     }
 }
 void uart_putc(u8 value)

@@ -95,13 +95,13 @@ int main(void)
         }
 
         uart_puts("BOOT: LOADED");
-        struct cycle64 cycle_start = read_cycle64();
-        uart_put_cycle_line("BOOT: CYCLE_START ", cycle_start);
         uart_puts("BOOT: RUNNING");
         uart_wait_till_tx_clear();
+        struct cycle64 cycle_start = read_cycle64();
         loader_jump_to_payload();
         watchdog_disable();
         struct cycle64 cycle_end = read_cycle64();
+        uart_put_cycle_line("BOOT: CYCLE_START ", cycle_start);
         uart_put_cycle_line("BOOT: CYCLE_END ", cycle_end);
         uart_put_cycle_line("BOOT: CYCLE_DELTA ", cycle_delta(cycle_end, cycle_start));
         uart_puts("BOOT: DONE");
