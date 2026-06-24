@@ -88,7 +88,7 @@ module uart_mmio (
     always @(*) begin
         case (addr)
             REG_TXDATA: rdata = {24'h0, tx_data};
-            REG_STATUS: rdata = {30'h0, rx_full, tx_fifo_space};
+            REG_STATUS: rdata = {29'h0, tx_fifo_empty, rx_full, tx_fifo_space};
             REG_RXDATA: rdata = {24'h0, rx_fifo[rx_rd_ptr]};
             default: rdata = 32'h0000_0000;
         endcase

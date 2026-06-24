@@ -6,7 +6,12 @@
 #define UART_RXDATA 0x08u
 #define UART_TX_READY 0x00000001u
 #define UART_RX_FULL  0x00000002u
+#define UART_TX_EMPTY 0x00000004u
 
+void uart_wait_till_tx_clear() {
+    while ((mmio_read32(UART_BASE + UART_STATUS) & UART_TX_EMPTY) == UART_TX_EMPTY) {
+    }
+}
 void uart_putc(u8 value)
 {
     while ((mmio_read32(UART_BASE + UART_STATUS) & UART_TX_READY) == 0u) {

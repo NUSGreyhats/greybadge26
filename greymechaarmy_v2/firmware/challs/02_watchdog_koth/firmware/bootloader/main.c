@@ -98,6 +98,7 @@ int main(void)
         struct cycle64 cycle_start = read_cycle64();
         uart_put_cycle_line("BOOT: CYCLE_START ", cycle_start);
         uart_puts("BOOT: RUNNING");
+        uart_wait_till_tx_clear();
         loader_jump_to_payload();
         watchdog_disable();
         struct cycle64 cycle_end = read_cycle64();

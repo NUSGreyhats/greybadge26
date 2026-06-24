@@ -1,28 +1,11 @@
 import time
 
+import hardware.default_overlay
 import hardware.fpga
-import busio
-import board
 
 
-BITSTREAM = "/challs/watchdog/watchdog_koth_smoke.bit"
-PAYLOAD = "/challs/watchdog/payload.wdog"
-
-
-def print_uart(data):
-    if not data:
-        return
-    try:
-        text = data.decode("utf-8")
-    except UnicodeError:
-        print("[UART]: %r" % data)
-        return
-
-    for line in text.splitlines(True):
-        if line.endswith("\n"):
-            print("[UART]: " + line[:-1])
-        else:
-            print("[UART]: " + line)
+BITSTREAM = "/hackin7/watchdog_koth_board_test/watchdog_koth_smoke.bit"
+PAYLOAD = "/hackin7/watchdog_koth_board_test/upload_payload.wdog"
 
 
 def read_until(uart, needle, timeout):
@@ -32,29 +15,11 @@ def read_until(uart, needle, timeout):
         chunk = uart.read(64)
         if chunk:
             window.extend(chunk)
-            print_uart(chunk)
             if needle in window:
                 return bytes(window)
         time.sleep(0.01)
     return bytes(window)
 
-def read_until_newline(uart, timeout):
-    deadline = time.monotonic() + timeout
-    window = bytearray()
-
-    while time.monotonic() < deadline:
-        chunk = uart.read(64)
-        if chunk:
-            window.extend(chunk)
-            print_uart(chunk)
-
-            if b"\n" in window:
-                idx = window.index(b"\n") + 1
-                return bytes(window[:idx])
-
-        time.sleep(0.01)
-
-    return bytes(window)
 
 def read_for(uart, timeout):
     deadline = time.monotonic() + timeout
@@ -63,34 +28,15 @@ def read_for(uart, timeout):
         chunk = uart.read(64)
         if chunk:
             data.extend(chunk)
-            print_uart(chunk)
         time.sleep(0.01)
     return bytes(data)
 
 
-def print_forever(uart):
-    print("WDOG_UPLOAD: UART_PRINT_FOREVER")
-
-    buffer = b""
-
-    while True:
-        chunk = uart.read(64)
-        if chunk:
-            buffer += chunk
-
-            while b"\n" in buffer:
-                idx = buffer.index(b"\n") + 1
-                line = buffer[:idx]
-                buffer = buffer[idx:]
-
-                print_uart(line)
-
-        time.sleep(0.01)
-
 def main():
     print("WDOG_UPLOAD: uploading", BITSTREAM)
     hardware.fpga.upload_bitstream(BITSTREAM)
-    uart = busio.UART(board.GP8, board.GP9, baudrate=9600, timeout=0.1)
+    overlay = hardware.default_overlay.Overlay()
+    uart = overlay.set_mode_uart()
     try:
         boot_log = read_for(uart, 2.0)
         print("WDOG_UPLOAD: boot_log=%r" % boot_log)
@@ -107,11 +53,13 @@ def main():
         if b"LOADED\n" not in upload_log or b"RUNNING\n" not in upload_log:
             raise AssertionError("payload upload did not reach LOADED/RUNNING")
 
+        post_run_log = read_for(uart, 2.0)
+        print("WDOG_UPLOAD: post_run_log=%r" % post_run_log)
+
         print("WDOG_UPLOAD: UART_UPLOAD_OK")
-        print_forever(uart)
     finally:
         uart.deinit()
+        overlay.deinit()
 
 
 main()
-
