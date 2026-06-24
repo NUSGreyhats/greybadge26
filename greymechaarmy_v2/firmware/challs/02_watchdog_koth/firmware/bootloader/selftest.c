@@ -9,8 +9,8 @@ int selftest_run(void)
         return 0;
     }
 
-    mmio_write32(WATCHDOG_BASE + 0x04u, 0x00000100u);
-    if (mmio_read32(WATCHDOG_BASE + 0x04u) != 0x00000100u) {
+    mmio_write32(WATCHDOG_BASE + 0x04u, 0x00000180u);
+    if (mmio_read32(WATCHDOG_BASE + 0x04u) != 0x00000180u) {
         return 0;
     }
 

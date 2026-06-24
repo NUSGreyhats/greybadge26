@@ -1,7 +1,7 @@
 .section .text.start
 .global _start
 _start:
-lui	a5,0x10000
+    lui	a5,0x10000
     sw	zero,512(a5) # 10000200 <main+0xfff81fc>
     lui	a1,0x20000
     lw	a4,0(a1) # 20000000 <main+0x1fff7ffc>

@@ -2,7 +2,7 @@
 .global _start
 _start:
     # === Disable MMIO ===============================
-    lui	a5,0x10000
+    lui	a5,0x10000 # 19e - 1a2 =>  3 cycles
     sw	zero,512(a5) # 10000200 <main+0xfff81fc> 
     # === Configure address ==========================
     lui	a1,0x20000

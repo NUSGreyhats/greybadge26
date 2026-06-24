@@ -99,8 +99,8 @@ int loader_receive_payload(void)
 
 void loader_jump_to_payload(void)
 {
-    mmio_write32(WATCHDOG_BASE + 0x10u, WATCHDOG_REGION_BASE);
-    mmio_write32(WATCHDOG_BASE + 0x14u, WATCHDOG_REGION_END);
-    mmio_write32(WATCHDOG_BASE + 0x00u, WATCHDOG_ENABLE | WATCHDOG_ARM | WATCHDOG_CLEAR);
+    // mmio_write32(WATCHDOG_BASE + 0x10u, WATCHDOG_REGION_BASE);
+    // mmio_write32(WATCHDOG_BASE + 0x14u, WATCHDOG_REGION_END);
+    // mmio_write32(WATCHDOG_BASE + 0x00u, WATCHDOG_ENABLE | WATCHDOG_ARM | WATCHDOG_CLEAR);
     jump_to_payload_asm(PAYLOAD_BASE, STACK_TOP);
 }

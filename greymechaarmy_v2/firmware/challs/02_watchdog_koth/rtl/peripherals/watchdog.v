@@ -37,7 +37,7 @@ module watchdog (
             ctrl_armed <= 1'b0;
             timeout <= 1'b0;
             counter <= 32'h0000_0000;
-            limit <= 32'h0010_0000;
+            limit <= 32'h0000_0400; //32'h0010_0000;
             payload_base <= `PAYLOAD_BASE;
             payload_end <= `PAYLOAD_END;
         end else begin

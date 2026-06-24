@@ -4,6 +4,8 @@
 #include "../include/memory_map.h"
 #include "../include/mmio.h"
 #include "../include/status_codes.h"
+#define WATCHDOG_REGION_BASE 0x00000000u
+#define WATCHDOG_REGION_END  0xffffffffu
 
 struct cycle64 {
     u32 high;
@@ -97,6 +99,10 @@ int main(void)
         uart_puts("BOOT: LOADED");
         uart_puts("BOOT: RUNNING");
         uart_wait_till_tx_clear();
+    
+        mmio_write32(WATCHDOG_BASE + 0x10u, WATCHDOG_REGION_BASE);
+        mmio_write32(WATCHDOG_BASE + 0x14u, WATCHDOG_REGION_END);
+        mmio_write32(WATCHDOG_BASE + 0x00u, WATCHDOG_ENABLE | WATCHDOG_ARM | WATCHDOG_CLEAR);
         struct cycle64 cycle_start = read_cycle64();
         loader_jump_to_payload();
         watchdog_disable();
