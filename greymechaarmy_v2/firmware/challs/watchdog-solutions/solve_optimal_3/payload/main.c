@@ -19,7 +19,6 @@ static void write32(unsigned int addr, unsigned int value)
 
 static void uart_putc(unsigned int value)
 {
-    while ((read32(UART_BASE + UART_STATUS) & UART_TX_READY) == 0u) {}
     write32(UART_BASE + UART_TXDATA, value);
 }
 
@@ -48,7 +47,7 @@ int main(void)
     *(volatile unsigned int *)UART_CHAR = '\n';
 }
 
-// Main difference is enabling O3 flag
+// 
 
 /*
 [UART]: BOOT: LOADED
