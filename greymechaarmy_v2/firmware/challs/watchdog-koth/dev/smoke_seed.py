@@ -6,6 +6,7 @@ from CTFd.plugins.watchdog_koth.models import (
     WatchdogKothScore,
     get_settings,
 )
+from CTFd.plugins.watchdog_koth.scoring import validate_cycles
 from CTFd.plugins.watchdog_koth.sync import (
     AWARD_CATEGORY,
     clear_team_score,
@@ -130,8 +131,8 @@ def main():
         db.session.add(
             WatchdogKothRun(
                 team_id=beta.id,
-                cycles=200,
-                note="smoke beta",
+                cycles=validate_cycles("0xc8"),
+                note="smoke beta hex",
                 created_by_user_id=admin.id,
             )
         )
@@ -155,6 +156,25 @@ def main():
         client = app.test_client()
         response = client.get("/api/v1/scoreboard")
         assert response.status_code == 200
+
+        with client.session_transaction() as sess:
+            sess["id"] = admin.id
+            sess["name"] = admin.name
+            sess["type"] = admin.type
+            sess["nonce"] = "watchdog-smoke-nonce"
+
+        beta_route_response = client.post(
+            "/admin/watchdog-koth/runs",
+            data={
+                "nonce": "watchdog-smoke-nonce",
+                "team_id": beta.id,
+                "cycles": "0x96",
+                "note": "smoke route hex beta",
+            },
+        )
+        assert beta_route_response.status_code == 302
+        beta_score = WatchdogKothScore.query.get(beta.id)
+        assert beta_score.best_cycles == 150
 
         clear_team_score(beta.id, admin.id, "smoke delete score")
         alpha_score = WatchdogKothScore.query.get(alpha.id)

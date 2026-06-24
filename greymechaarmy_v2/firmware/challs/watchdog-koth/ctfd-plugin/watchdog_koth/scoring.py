@@ -1,6 +1,8 @@
 def validate_cycles(value):
+    text = str(value).strip()
+    base = 16 if text.lower().startswith("0x") else 10
     try:
-        cycles = int(value)
+        cycles = int(text, base)
     except (TypeError, ValueError):
         raise ValueError("cycles must be a positive integer")
 

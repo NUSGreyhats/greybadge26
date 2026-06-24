@@ -22,6 +22,19 @@ class ScoringTests(unittest.TestCase):
         from watchdog_koth.scoring import validate_cycles
 
         self.assertEqual(validate_cycles("12345"), 12345)
+        self.assertEqual(validate_cycles("096"), 96)
+
+    def test_hex_cycles_are_supported_with_prefix(self):
+        from watchdog_koth.scoring import validate_cycles
+
+        self.assertEqual(validate_cycles("0x96"), 150)
+        self.assertEqual(validate_cycles("0X64"), 100)
+
+    def test_invalid_hex_cycles_are_rejected(self):
+        from watchdog_koth.scoring import validate_cycles
+
+        with self.assertRaises(ValueError):
+            validate_cycles("0xnot-a-cycle-count")
 
     def test_no_runs_return_no_scores(self):
         from watchdog_koth.scoring import compute_scores

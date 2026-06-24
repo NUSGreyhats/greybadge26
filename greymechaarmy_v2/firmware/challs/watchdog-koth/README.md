@@ -34,6 +34,54 @@ From the repository root:
 python -m unittest greymechaarmy_v2/firmware/challs/watchdog-koth/tests/test_scoring.py
 ```
 
+## Setting Up A New CTFd
+
+Install the plugin by making this package:
+
+```text
+greymechaarmy_v2/firmware/challs/watchdog-koth/ctfd-plugin/watchdog_koth
+```
+
+available inside the CTFd container or host at:
+
+```text
+/opt/CTFd/CTFd/plugins/watchdog_koth
+```
+
+For a Docker Compose CTFd service, add a read-only bind mount like this:
+
+```yaml
+volumes:
+  - ./greymechaarmy_v2/firmware/challs/watchdog-koth/ctfd-plugin/watchdog_koth:/opt/CTFd/CTFd/plugins/watchdog_koth:ro
+```
+
+Then restart CTFd:
+
+```powershell
+docker compose down
+docker compose up -d
+```
+
+After CTFd starts:
+
+1. Complete the normal CTFd setup wizard.
+2. Enable team mode.
+3. Create teams and make sure each scored team has at least one member.
+4. Visit `/admin/watchdog-koth`.
+5. Enter cycle counts for each team. Decimal values such as `150` and prefixed
+   hexadecimal values such as `0x96` are both accepted.
+
+The plugin creates and keeps synced:
+
+- a 0-point `Watchdog KOTH` Standard challenge for solve visibility,
+- one CTFd Solve per scored team,
+- one CTFd Award per scored team for the calculated KOTH points.
+
+Use **Resync all** from `/admin/watchdog-koth` if CTFd solves or awards are
+edited outside the plugin. Use **Delete score** to clear a team's active KOTH
+score; this voids that team's active runs and removes the synced solve and
+award.
+
 ## Local CTFd Smoke Test
 
 From `greymechaarmy_v2/firmware/challs/watchdog-koth/dev`:
@@ -49,7 +97,10 @@ mode, create at least two teams with one member each, and visit:
 /admin/watchdog-koth
 ```
 
-Enter cycle counts for the teams and verify:
+Enter cycle counts for the teams. Cycle counts may be decimal, such as `150`,
+or prefixed hexadecimal, such as `0x96`.
+
+Verify:
 
 - the team table shows best cycles and scores,
 - CTFd shows the plugin-managed `Watchdog KOTH` challenge,
@@ -70,4 +121,5 @@ docker compose -f greymechaarmy_v2/firmware/challs/watchdog-koth/dev/docker-comp
 The seeded admin login is `watchdog-admin` / `watchdog-password`. The smoke
 script resets Watchdog KOTH plugin rows in the local CTFd database, creates two
 teams, inserts cycle runs, syncs CTFd solves and awards, checks score deletion,
-and checks that the scoreboard API returns HTTP 200.
+checks decimal and hexadecimal cycle input, and checks that the scoreboard API
+returns HTTP 200.

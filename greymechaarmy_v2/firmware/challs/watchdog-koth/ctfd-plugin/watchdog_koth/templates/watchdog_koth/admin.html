@@ -57,7 +57,7 @@
           <option value="{{ team.id }}">{{ team.name }}</option>
           {% endfor %}
         </select>
-        <input name="cycles" type="number" min="1" class="form-control mr-2" placeholder="Cycles" required>
+        <input name="cycles" type="text" inputmode="text" class="form-control mr-2" placeholder="Cycles, e.g. 150 or 0x96" required>
         <input name="note" class="form-control mr-2" placeholder="Note">
         <button class="btn btn-primary" type="submit">Save run</button>
       </form>
