@@ -4,8 +4,8 @@ import hardware.default_overlay
 import hardware.fpga
 
 
-BITSTREAM = "/hackin7/watchdog_koth_board_test/watchdog_koth_smoke.bit"
-PAYLOAD = "/hackin7/watchdog_koth_board_test/upload_payload.wdog"
+BITSTREAM = "/challs/watchdog/watchdog_koth_smoke.bit"
+PAYLOAD = "/challs/watchdog/payload.wdog" # Change to your own payload 
 
 
 def print_uart(data):
