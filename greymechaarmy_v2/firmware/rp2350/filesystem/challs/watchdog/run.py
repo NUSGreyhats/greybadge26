@@ -6,7 +6,7 @@ import board
 
 
 BITSTREAM = "/challs/watchdog/watchdog_koth_smoke.bit"
-PAYLOAD = "/challs/watchdog/payload.wdog"
+PAYLOAD = "/challs/watchdog/payload.wdog" # Modify this
 UART_READ_SIZE = 256
 UART_RX_BUFFER_SIZE = 4096
 UART_POLL_DELAY = 0.002
@@ -137,4 +137,5 @@ def main():
 
 
 main()
+
 

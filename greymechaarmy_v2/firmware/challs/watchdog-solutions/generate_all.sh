@@ -10,5 +10,12 @@ do
     cd ../
 done
 
+cd empty
+./compile_payload.sh
+cp build/payload.wdog ../payloads/empty.wdog
+cd ../
 
-
+cd solve_naive
+./compile_payload.sh
+cp build/payload.wdog ../payloads/naive.wdog
+cd ../
