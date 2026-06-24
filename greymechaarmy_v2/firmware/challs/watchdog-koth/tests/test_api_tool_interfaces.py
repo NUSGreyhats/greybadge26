@@ -75,6 +75,8 @@ class ApiToolWebTests(unittest.TestCase):
 
         self.assertIn("Watchdog KOTH", html)
         self.assertIn("Alpha", html)
+        self.assertIn("Best cycles (hex)", html)
+        self.assertIn("Cycles (hex)", html)
         self.assertIn("0x96", html)
         self.assertIn("Delete score", html)
         self.assertIn("Saved", html)

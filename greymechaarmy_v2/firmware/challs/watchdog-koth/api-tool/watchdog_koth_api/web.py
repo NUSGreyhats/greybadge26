@@ -32,13 +32,16 @@ def render_dashboard(settings, runs, scores, teams, token, message=""):
     rows = []
     for team_id in sorted(known):
         score = scores.get(team_id)
+        best_cycles = "" if score is None else score["best_cycles"]
+        best_cycles_hex = "" if score is None else hex(score["best_cycles"])
         rows.append(
-            "<tr><td>{team_id}</td><td>{name}</td><td>{cycles}</td><td>{score}</td>"
+            "<tr><td>{team_id}</td><td>{name}</td><td>{cycles}</td><td>{cycles_hex}</td><td>{score}</td>"
             "<td><form method='post' action='/delete-score'><input type='hidden' name='token' value='{token}'>"
             "<input type='hidden' name='team_id' value='{team_id}'><button>Delete score</button></form></td></tr>".format(
                 team_id=team_id,
                 name=escape(known[team_id]),
-                cycles="" if score is None else score["best_cycles"],
+                cycles=best_cycles,
+                cycles_hex=best_cycles_hex,
                 score="" if score is None else score["score"],
                 token=escape(token),
             )
@@ -47,12 +50,13 @@ def render_dashboard(settings, runs, scores, teams, token, message=""):
     run_rows = []
     for run in sorted(runs, key=lambda item: item.run_id, reverse=True)[:50]:
         run_rows.append(
-            "<tr><td>{id}</td><td>{team}</td><td>{cycles}</td><td>{note}</td><td>{voided}</td>"
+            "<tr><td>{id}</td><td>{team}</td><td>{cycles}</td><td>{cycles_hex}</td><td>{note}</td><td>{voided}</td>"
             "<td><form method='post' action='/void-run'><input type='hidden' name='token' value='{token}'>"
             "<input type='hidden' name='run_id' value='{id}'><button>Void</button></form></td></tr>".format(
                 id=run.run_id,
                 team=escape(run.team_name or str(run.team_id)),
                 cycles=run.cycles,
+                cycles_hex=hex(run.cycles),
                 note=escape(run.note),
                 voided=escape(run.voided_at),
                 token=escape(token),
@@ -87,9 +91,9 @@ def render_dashboard(settings, runs, scores, teams, token, message=""):
     <button>Resync all</button>
   </form>
   <h2>Scores</h2>
-  <table><tr><th>Team ID</th><th>Team</th><th>Best cycles</th><th>Score</th><th>Actions</th></tr>{rows}</table>
+  <table><tr><th>Team ID</th><th>Team</th><th>Best cycles</th><th>Best cycles (hex)</th><th>Score</th><th>Actions</th></tr>{rows}</table>
   <h2>Runs</h2>
-  <table><tr><th>Run ID</th><th>Team</th><th>Cycles</th><th>Note</th><th>Voided</th><th>Actions</th></tr>{run_rows}</table>
+  <table><tr><th>Run ID</th><th>Team</th><th>Cycles</th><th>Cycles (hex)</th><th>Note</th><th>Voided</th><th>Actions</th></tr>{run_rows}</table>
   <p>Example hex input: 0x96</p>
 </body>
 </html>
