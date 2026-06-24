@@ -55,3 +55,23 @@ int main(void)
         for (i = 0; i < words; i++) {uart_put_word_bytes(read32(FLAG_BASE + (i * 4u)));}
         uart_putc('\n');
 }
+
+/*
+fpga: using rp2pio burst driver (Phase A)
+WDOG_UPLOAD: uploading /challs/watchdog/watchdog_koth_smoke.bit
+607867 bytes uploaded in 1612 ms (377 kB/s)
+[UART]: b'\xa4\xaa\x14\xca\x8aU5E\xf5\xf5\xb5\xa5$\xf5\xf5E\xa5\x02\x92\x15\x05\x11e)\xff'
+WDOG_UPLOAD: boot_log=b'\xa4\xaa\x14\xca\x8aU5E\xf5\xf5\xb5\xa5$\xf5\xf5E\xa5\x02\x92\x15\x05\x11e)\xff'
+WDOG_UPLOAD: sending_payload=224 bytes
+[UART]: BOOT: LOADED
+[UART]: BOOT: RUNNING
+[UART]: grey{mmio_fuzzz}
+[UART]: BOOT: CYCLE_START 0x00000000070fb7a3
+[UART]: BOOT: CYCLE_END 0x00000000070fc166
+[UART]: BOOT: CYCLE_DELTA 0x00000000000009c3
+[UART]: BOOT: DONE
+[UART]: BOOT: READY
+WDOG_UPLOAD: upload_log=b'BOOT: LOADED\nBOOT: RUNNING\ngrey{mmio_fuzzz}\nBOOT: CYCLE_START 0x00000000070fb7a3\nBOOT: CYCLE_END 0x00000000070fc166\nBOOT: CYCLE_DELTA 0x00000000000009c3\nBOOT: DONE\nBOOT: READY\n'
+WDOG_UPLOAD: UART_UPLOAD_OK
+WDOG_UPLOAD: UART_PRINT_FOREVER
+*/

@@ -35,5 +35,11 @@ int main(void)
     write32(LED_BASE, 0xffu);
     //uart_puts("hello from payload");
 
-    //while (1) {}
+    // unsigned int length;
+    // unsigned int words;
+    // unsigned int i;
+    // length = read32(FLAG_BASE + 0xf0u);
+    // words = (length + 3u) / 4u;
+    // for (i = 0; i < words; i++) {uart_put_word_bytes(read32(FLAG_BASE + (i * 4u)));}
+    // uart_putc('\n');
 }
