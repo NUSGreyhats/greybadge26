@@ -43,19 +43,19 @@ static void uart_put_word_bytes(unsigned int value)
 
 int main(void)
 {
-    //*(volatile unsigned int *)addr = value
     *(volatile unsigned int *)0x10000200u = 0u; // Disable MMIO
     for (int i = 0; i < 4; i++) {uart_put_word_bytes(read32(FLAG_BASE + (i * 4u)));}
     *(volatile unsigned int *)UART_CHAR = '\n';
 }
 
+// Main difference is enabling O3 flag
+// Saves 0x22=34 cycles
+
 /*
 [UART]: BOOT: LOADED
 [UART]: BOOT: RUNNING
 [UART]: grey{mmio_fuzzz}
-[UART]: BOOT: CYCLE_START 0x00000000065d6e8d
-[UART]: BOOT: CYCLE_END 0x00000000065d734a
-[UART]: BOOT: CYCLE_DELTA 0x00000000000004bd
-[UART]: BOOT: DONE
-[UART]: BOOT: READY
+[UART]: BOOT: CYCLE_START 0x00000000063baeb1
+[UART]: BOOT: CYCLE_END 0x00000000063bb1c6
+[UART]: BOOT: CYCLE_DELTA 0x0000000000000315
 */

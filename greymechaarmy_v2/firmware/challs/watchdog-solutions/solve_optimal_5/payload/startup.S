@@ -1,0 +1,60 @@
+.section .text.start
+.global _start
+_start:
+lui	a5,0x10000
+    sw	zero,512(a5) # 10000200 <main+0xfff81fc>
+    lui	a1,0x20000
+    lw	a4,0(a1) # 20000000 <main+0x1fff7ffc>
+    lui	a5,0x10000
+    mv	a2,a1
+    sw	a4,0(a5) # 10000000 <main+0xfff7ffc>
+    lw	a4,0(a1)
+    mv	a3,a1
+    addi	a2,a2,4
+    srli	a4,a4,0x8
+    sw	a4,0(a5)
+    lw	a0,0(a1)
+    mv	a4,a1
+    addi	a3,a3,8
+    srli	a0,a0,0x10
+    sw	a0,0(a5)
+    lw	a1,0(a1)
+    addi	a4,a4,12
+    li	a6,10
+    srli	a1,a1,0x18
+    sw	a1,0(a5)
+    lw	a1,0(a2)
+    li	a0,0
+    sw	a1,0(a5)
+    lw	a1,0(a2)
+    srli	a1,a1,0x8
+    sw	a1,0(a5)
+    lw	a1,0(a2)
+    srli	a1,a1,0x10
+    sw	a1,0(a5)
+    lw	a2,0(a2)
+    srli	a2,a2,0x18
+    sw	a2,0(a5)
+    lw	a2,0(a3)
+    sw	a2,0(a5)
+    lw	a2,0(a3)
+    srli	a2,a2,0x8
+    sw	a2,0(a5)
+    lw	a2,0(a3)
+    srli	a2,a2,0x10
+    sw	a2,0(a5)
+    lw	a3,0(a3)
+    srli	a3,a3,0x18
+    sw	a3,0(a5)
+    lw	a3,0(a4)
+    sw	a3,0(a5)
+    lw	a3,0(a4)
+    srli	a3,a3,0x8
+    sw	a3,0(a5)
+    lw	a3,0(a4)
+    srli	a3,a3,0x10
+    sw	a3,0(a5)
+    lw	a4,0(a4)
+    srli	a4,a4,0x18
+    sw	a4,0(a5)
+    sw	a6,0(a5)
