@@ -7,8 +7,11 @@ enter measured clock-cycle counts per team, and the plugin computes CTFd scores.
 ## Layout
 
 - `ctfd-plugin/watchdog_koth/` - CTFd plugin package.
+- `api-tool/watchdog_koth_api/` - standalone no-plugin CTFd API tool.
 - `tests/` - local unit tests for scoring behavior.
 - `dev/docker-compose.yml` - local CTFd instance with the plugin mounted.
+- `dev/docker-compose.api.yml` - local CTFd instance with only the API tool
+  mounted, not the plugin.
 
 ## Scoring
 
@@ -35,6 +38,53 @@ python -m unittest greymechaarmy_v2/firmware/challs/watchdog-koth/tests/test_sco
 ```
 
 ## Setting Up A New CTFd
+
+The preferred setup is now the no-plugin API tool. It stores KOTH runs locally
+in CSV and syncs CTFd through an admin access token.
+
+Create an admin access token in CTFd, then run from this folder or pass
+`--base` to choose a storage directory:
+
+```powershell
+$env:CTFD_TOKEN = "<admin access token>"
+$env:PYTHONPATH = "api-tool"
+python -m watchdog_koth_api --base api-state init
+```
+
+Edit `api-state/settings.json` if your CTFd URL is not `http://localhost:8000`.
+Then add runs and sync scores:
+
+```powershell
+python -m watchdog_koth_api --base api-state teams
+python -m watchdog_koth_api --base api-state add-run --team-id 1 --team-name "Team One" --cycles 150
+python -m watchdog_koth_api --base api-state add-run --team-id 2 --team-name "Team Two" --cycles 0x96
+python -m watchdog_koth_api --base api-state scores
+python -m watchdog_koth_api --base api-state sync
+```
+
+The API tool creates and keeps synced:
+
+- a 0-point `Watchdog KOTH` Standard challenge for solve visibility,
+- one native CTFd Solve per scored team,
+- one CTFd Award per scored team for the calculated KOTH points.
+
+To clear a team's score without deleting history:
+
+```powershell
+python -m watchdog_koth_api --base api-state delete-score --team-id 2 --reason "bad measurement"
+```
+
+To run the local web UI:
+
+```powershell
+$env:WATCHDOG_KOTH_WEB_TOKEN = "change-me"
+python -m watchdog_koth_api --base api-state serve
+```
+
+Open `http://127.0.0.1:8765/?token=change-me`. The web UI is intended for
+local/internal operation only.
+
+## Legacy CTFd Plugin Setup
 
 Install the plugin by making this package:
 
@@ -123,3 +173,19 @@ script resets Watchdog KOTH plugin rows in the local CTFd database, creates two
 teams, inserts cycle runs, syncs CTFd solves and awards, checks score deletion,
 checks decimal and hexadecimal cycle input, and checks that the scoreboard API
 returns HTTP 200.
+
+## Local No-Plugin API Smoke Test
+
+From the repository root, copy the smoke script into the no-plugin container
+and run it:
+
+```powershell
+docker compose -p watchdog_api -f greymechaarmy_v2/firmware/challs/watchdog-koth/dev/docker-compose.api.yml up -d
+docker compose -p watchdog_api -f greymechaarmy_v2/firmware/challs/watchdog-koth/dev/docker-compose.api.yml cp greymechaarmy_v2/firmware/challs/watchdog-koth/dev/api_smoke.py ctfd:/tmp/watchdog_api_smoke.py
+docker compose -p watchdog_api -f greymechaarmy_v2/firmware/challs/watchdog-koth/dev/docker-compose.api.yml exec -T ctfd sh -lc "PYTHONPATH=/opt/CTFd /opt/venv/bin/python /tmp/watchdog_api_smoke.py"
+```
+
+The API smoke verifies that CTFd runs without the `watchdog_koth` plugin
+mounted, then uses the standalone API tool to initialize storage, add decimal
+and hexadecimal runs, sync challenge solves and awards, delete one team's score,
+and check the scoreboard API.
