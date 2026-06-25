@@ -37,7 +37,7 @@
 #include "openthread/thread.h"
 #include "openthread/thread_ftd.h"
 
-#define JOINER_CREDENTIAL "CTFKEY99"
+#define JOINER_CREDENTIAL "GREYFLAG99"
 
 static const uint8_t NETWORK_KEY[OT_NETWORK_KEY_SIZE] = {
     0xAA, 0xAD, 0xBE, 0xEB, 0xCA, 0xAC, 0xBA, 0xDD,

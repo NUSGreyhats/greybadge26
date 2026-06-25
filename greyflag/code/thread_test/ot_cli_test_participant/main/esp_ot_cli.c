@@ -44,7 +44,7 @@
 
 #define TAG "ot_esp_cli"
 
-#define JOINER_CREDENTIAL "CTFKEY99"
+#define JOINER_CREDENTIAL "GREYFLAG99"
 
 static bool s_welcomed = false;
 static bool s_attach_started = false;

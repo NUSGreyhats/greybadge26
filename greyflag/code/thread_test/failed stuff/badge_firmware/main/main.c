@@ -13,7 +13,7 @@
 #include "openthread/thread.h"
 #include "openthread/udp.h"
 
-#define JOINER_CREDENTIAL  "CTFKEY99"
+#define JOINER_CREDENTIAL  "Grey9999"
 #define WELCOME_PORT        1234
 #define WELCOME_MSG         "Welcome to GreyFlag IoT network"
 

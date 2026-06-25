@@ -1,11 +1,18 @@
 # ESP-IDF build outputs
 build/
 .pio/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+
+# IDE
 .vscode/
 
 # Python
 __pycache__/
 *.pyc
+# virtual environments
+crypto/
 
 # macOS
 .DS_Store

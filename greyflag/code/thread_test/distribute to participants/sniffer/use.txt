@@ -1,0 +1,4 @@
+pip install esptool
+esptool.py -p <port> write_flash 0x0 sniffer_merged.bin
+
+for participants to check if they can detect anything on the network
