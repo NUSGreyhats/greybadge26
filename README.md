@@ -16,12 +16,11 @@ https://docs.google.com/document/d/1O7PYgDroo-BpducnTAoIE6ahuxutZlo5GIXXL_gjZgU/
 ```
 
 ```
-thread test progress: 
-badge firmware and organizer commissioner maybe almost working? A LOT OF ISSUES HELP HERE NEEDED BADLY
-broadcaster and sniffer not tested at all, very cooked
-
-final to do: 
-combine all challenges into a format like greymecha with a menu (over uart) where participants can select which challenge they want to do and see the description of each challenge
+Progress: 
+Combine all challenges into a format like greymecha with a menu (over uart) where participants can select which challenge they want to do and see the description of each challenge
+prepare the final files binary for participants to flash- main firmware binary with mic flag replaced with a placeholder (i will set up the actual challenge on site)
+make sure everything works together cleanly
+finish up the ctfchallenge repo as well
 ```
 
 
