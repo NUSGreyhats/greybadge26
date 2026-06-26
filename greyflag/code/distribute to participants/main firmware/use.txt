@@ -1,3 +1,4 @@
+this is the reusable firmware for you to flash even after you go back
 pip install esptool
 esptool.py -p <port> write_flash 0x0 greyflag_merged.bin
 
