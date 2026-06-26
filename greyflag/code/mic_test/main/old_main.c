@@ -78,3 +78,13 @@ void app_main(void)
         vTaskDelay(pdMS_TO_TICKS(200));
     }
 }
+
+static const float ch2_tier_hz[] = { 1, 500, 2000, 5000, 10000, 15000 };
+static const char *ch2_tier_msg[] = {
+    "Oh, I think I hear something...",
+    "Huh, is someone talking?",
+    "Wow, you are a superb soprano!",
+    "Whew - that's dog-whistle territory.",
+    "Yikes, why did you turn this into an audio test?",
+    "And this, is, to go, even. further. BEYOND!",
+};
