@@ -8,6 +8,7 @@ import apps.brick_game
 import apps.brick_good
 import apps.asteroid
 import apps.spamgame
+import apps.snake
 import apps.others
 import apps.music
 import apps.aoc25.main
@@ -64,7 +65,7 @@ def menu(hw_state):
     curr = 0
     options = [
         "Hi I'm Locked In", "Live Firing", "Animation", "Face", "Music",
-        "Brick Game", "Brick Good", "Asteroids", "Spam Game", "Controller",
+        "Brick Game", "Brick Good", "Snake",  "Asteroids", "Spam Game", "Controller",
         "Advent of Code 25",
         "Load Bitstream",  # mecha_fpga_loader entry
     ]
@@ -101,6 +102,9 @@ def menu(hw_state):
                 apps.brick_game.brick_game(hw_state)
             if options[curr] == "Brick Good":
                 apps.brick_good.brick_game(hw_state)
+            if options[curr] == "Snake":
+                apps.snake.snake_game(hw_state)
+                fpga_buttons = hw_state["fpga_overlay"].set_mode_buttons()
             if options[curr] == "Asteroids":
                 apps.asteroid.run_asteroids(hw_state)
             if options[curr] == "Spam Game":
