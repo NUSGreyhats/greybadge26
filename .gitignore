@@ -11,3 +11,12 @@ greymechaarmy_v2/hardware/greybadge_pcb/jlcpcb/gerber/greybadge_pcb-SilkBottom.g
 greymechaarmy_v2/hardware/greybadge_pcb/jlcpcb/gerber/greybadge_pcb-SilkTop.gbr
 greymechaarmy_v2/hardware/greybadge_pcb/jlcpcb/production_files/GERBER-greybadge_pcb.zip
 bitstream-re/verilog/main_synth.v
+
+# GreyFlag ESP-IDF build artifacts
+/greyflag/code/*/build/
+/greyflag/code/*/sdkconfig
+/greyflag/code/*/dependencies.lock
+
+# Watchdog OLED variant build artifacts
+/greymechaarmy_v2/firmware/challs/02_watchdog_koth_oled/build/
+/greymechaarmy_v2/firmware/challs/02_watchdog_koth_oled/**/__pycache__/
