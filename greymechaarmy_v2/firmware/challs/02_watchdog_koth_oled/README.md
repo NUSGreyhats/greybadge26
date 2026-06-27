@@ -36,6 +36,5 @@ Then run:
 import challs.watchdog_oled.run
 ```
 
-The launcher writes an NVM autorun marker and reloads. On the next boot,
-`code.py` releases the RP2350 display, programs the OLED watchdog bitstream,
-sends the payload over UART, and prints UART output.
+The launcher releases the RP2350 display in-place, programs the OLED watchdog
+bitstream, sends the payload over UART, and prints UART output.

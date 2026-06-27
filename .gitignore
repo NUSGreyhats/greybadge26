@@ -20,3 +20,4 @@ bitstream-re/verilog/main_synth.v
 # Watchdog OLED variant build artifacts
 /greymechaarmy_v2/firmware/challs/02_watchdog_koth_oled/build/
 /greymechaarmy_v2/firmware/challs/02_watchdog_koth_oled/**/__pycache__/
+/greymechaarmy_v2/firmware/rp2350/filesystem/challs/watchdog_oled/__pycache__/
