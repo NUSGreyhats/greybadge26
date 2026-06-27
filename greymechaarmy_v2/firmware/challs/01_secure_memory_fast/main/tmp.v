@@ -84,6 +84,7 @@ module top(
     assign chall_fast_secmem_address = address;
     // PMOD J2 bit 1 is not observable on this badge, so mirror value[1] onto
     // connected PMOD J2 bit 7. Challenge bytes are ASCII, so value[7] is zero.
-    assign pmod_j2 = {chall_fast_secmem_value[1], chall_fast_secmem_value[6:2], 1'b0, chall_fast_secmem_value[0]};
+    // assign pmod_j2 = {chall_fast_secmem_value[7], chall_fast_secmem_value[6:2], chall_fast_secmem_value[1], chall_fast_secmem_value[0]};
+    assign pmod_j2 = {chall_fast_secmem_value[1], chall_fast_secmem_value[6:2], chall_fast_secmem_value[1], chall_fast_secmem_value[0]};
     
 endmodule

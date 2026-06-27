@@ -541,7 +541,7 @@ Removed top 2 bits (of 7) from mux cell top.$flatten\chall_fast_secmem.\mem.$ter
 Removed top 2 bits (of 7) from mux cell top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:19$261 ($mux).
 Removed top 2 bits (of 7) from mux cell top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:20$259 ($mux).
 Removed top 27 bits (of 32) from wire top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:10$279_Y.
-Removed top 30 bits (of 32) from wire top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:11$277_Y.
+Removed top 28 bits (of 32) from wire top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:11$277_Y.
 Removed top 27 bits (of 32) from wire top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:12$275_Y.
 Removed top 27 bits (of 32) from wire top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:13$273_Y.
 Removed top 27 bits (of 32) from wire top.$flatten\chall_fast_secmem.\mem.$ternary$tmp.v:14$271_Y.
@@ -1114,14 +1114,14 @@ ABC: + read_lut <abc-temp-dir>/input.lut
 ABC: + read_box <abc-temp-dir>/input.box 
 ABC: + &read <abc-temp-dir>/input.xaig 
 ABC: + &ps 
-ABC: <abc-temp-dir>/input : i/o =     20/     31  and =     155  lev =   24 (5.52)  mem = 0.00 MB  box = 0  bb = 0
+ABC: <abc-temp-dir>/input : i/o =     20/     31  and =     155  lev =   24 (5.68)  mem = 0.00 MB  box = 0  bb = 0
 ABC: + &scorr 
 ABC: Warning: The network is combinational.
 ABC: + &sweep 
 ABC: + &dc2 
 ABC: + &dch -f 
 ABC: + &ps 
-ABC: <abc-temp-dir>/input : i/o =     20/     31  and =      89  lev =    6 (2.52)  mem = 0.00 MB  ch =   13  box = 0  bb = 0
+ABC: <abc-temp-dir>/input : i/o =     20/     31  and =      89  lev =    6 (2.65)  mem = 0.00 MB  ch =   13  box = 0  bb = 0
 ABC: cst =       0  cls =     11  lit =      13  unused =      85  proof =     0
 ABC: + &if -W 300 -v 
 ABC: K = 7. Memory (bytes): Truth =    0. Cut =   64. Obj =  148. Set =  672. CutMin = no
@@ -1137,12 +1137,12 @@ ABC: + &write -n <abc-temp-dir>/output.aig
 ABC: + &mfs 
 ABC: The network is not changed by "&mfs".
 ABC: + &ps -l 
-ABC: <abc-temp-dir>/input : i/o =     20/     31  and =     158  lev =    6 (2.52)  mem = 0.00 MB  box = 0  bb = 0
-ABC: Mapping (K=6)  :  lut =     17  edge =      91  lev =    1 (0.61)  mem = 0.00 MB
+ABC: <abc-temp-dir>/input : i/o =     20/     31  and =     158  lev =    6 (2.65)  mem = 0.00 MB  box = 0  bb = 0
+ABC: Mapping (K=6)  :  lut =     17  edge =      91  lev =    1 (0.65)  mem = 0.00 MB
 ABC: LUT = 17 : 2=0 0.0 %  3=0 0.0 %  4=1 5.9 %  5=9 52.9 %  6=7 41.2 %  Ave = 5.35
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + time 
-ABC: elapse: 0.02 seconds, total: 0.02 seconds
+ABC: elapse: 0.04 seconds, total: 0.04 seconds
 
 2.43.13.6. Executing AIGER frontend.
 <suppressed ~110 debug messages>
@@ -1331,6 +1331,6 @@ Found and reported 0 problems.
 
 2.50. Executing JSON backend.
 
-End of script. Logfile hash: 1b2f494730, CPU: user 0.62s system 0.05s, MEM: 27.20 MB peak
+End of script. Logfile hash: cab59a7311, CPU: user 0.88s system 0.15s, MEM: 27.32 MB peak
 Yosys 0.52 (git sha1 fee39a3284c90249e1d9684cf6944ffbbcbb8f90)
-Time spent: 39% 20x read_verilog (0 sec), 8% 19x opt_clean (0 sec), ...
+Time spent: 38% 20x read_verilog (0 sec), 9% 1x abc9_exe (0 sec), ...
