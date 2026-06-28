@@ -44,4 +44,5 @@ _start:
     sb  a4,0(a5) 
     addi a4, zero, 0x0a
     sw	 a4,0(a5)
+    ret
 

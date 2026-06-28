@@ -90,7 +90,7 @@ read_verilog -I $OLD_ROOT/rtl/core -I $ROOT/build/firmware -I $ROOT/rtl/oled -DS
   $OLD_ROOT/rtl/peripherals/uart_serial_bridge.v \
   $OLD_ROOT/rtl/peripherals/watchdog.v \
   $OLD_ROOT/rtl/peripherals/reset_reason.v \
-  $OLD_ROOT/rtl/peripherals/flag_rom.v \
+  rtl/peripherals/flag_rom.v \
   rtl/oled/ecp5_oled_pll.v \
   rtl/oled/oled_init.v \
   rtl/oled/oled_stream.v \
